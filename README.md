@@ -13,9 +13,14 @@ Do note basis feedback from students - the content and flow of the sessions keep
 [ Duration : @60 Minutes ] 
 
 1. Intro to R the [R Project for Statistical Analysis](https://www.r-project.org/), Intro to [R Studio](https://www.rstudio.com/) , Intro to CRAN - any other introductory exchanges. 
-
-Download and Install R Studio - Windows 
-Download and Install R Studio - Linux
+#
+[Download and Install R - Linux](https://ftp.iitm.ac.in/cran/bin/linux/)
+#
+[Download and Install R - Windows](https://ftp.iitm.ac.in/cran/bin/windows/base/R-3.4.1-win.exe)
+#
+[Download and Install R Studio - Linux](https://download1.rstudio.org/rstudio-1.0.143-amd64.deb)
+#
+[Download and Install R Studio - Windows](https://download1.rstudio.org/RStudio-1.0.143.exe)
 
 #
 2. Intro to Basic Data Structures in R - Array , Matrix , DataFrame and Lists .
