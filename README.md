@@ -38,3 +38,30 @@ Questions and Answers
 [ Duration : @60 Minutes ] 
 #
 #
+1. Using the Built in HELP Commands , learning to use Vignettes and CRAN for HELP. 
+#
+2. The basic Arithmetic Operators , NaN , NA etc .
+#
+3. Intro to Logical Operators and Vectorized operations. 
+#
+4. R Data Structures - The ATOMIC Vector . Common operations of ...
+#
+5. The FACTOR , the LISTS , operations of ...
+#
+6. The DataFRAME , common Operations of DataFRAME's - specifying individual elements etc . 
+#
+7. The MATRIX and Matrices , common Operations of Matrices . 
+#
+8. The ARRAY Data Structure .
+#
+Questions and Answers 
+
+### Module -3 :- 
+[ Duration : @60 Minutes ] 
+#
+#
+
+
+
+
+
