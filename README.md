@@ -12,7 +12,11 @@ Do note basis feedback from students - the content and flow of the sessions keep
 ### Module -1 :- 
 [ Duration : @60 Minutes ] 
 
-1. Intro to R , Intro to R Studio , Intro to CRAN - any other introductory exchanges  
+1. Intro to R the [R Project for Statistical Analysis](https://www.r-project.org/), Intro to [R Studio](https://www.rstudio.com/) , Intro to CRAN - any other introductory exchanges. 
+
+Download and Install R Studio - Windows 
+Download and Install R Studio - Linux
+
 #
 2. Intro to Basic Data Structures in R - Array , Matrix , DataFrame and Lists .
    How to create an Array a Matrix a DataFrame and Lists . 
