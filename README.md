@@ -10,20 +10,22 @@ Do note basis feedback from students - the content and flow of the sessions keep
 ### Learning Index :- 
 
 ### Module -1 :- 
+[ Duration : @60 Minutes ] 
 
-1. Intro to R , Intro to R Studio , Intro to CRAN - any other introductory exchanges [ Duration : @ 20 Mins ] 
+1. Intro to R , Intro to R Studio , Intro to CRAN - any other introductory exchanges  
 #
-2. Intro to Basic Data Structures in R - Array , Matrix , DataFrame and Lists .      [ Duration : @ 20 Mins ] 
+2. Intro to Basic Data Structures in R - Array , Matrix , DataFrame and Lists .
    How to create an Array a Matrix a DataFrame and Lists . 
    Conducting our very First Basic Input Output and other computations.
 #
-3. Intro to CSV files . Entering Data from a CSV file . Entering Data from the R Studio GUI vs. from R Script. [ Duration : @ 20 Mins ] 
+3. Intro to CSV files . Entering Data from a CSV file . Entering Data from the R Studio GUI vs. from R Script. 
 #
-4. Saving our very First R Script and Environment variables .                       [ Duration : @ 20 Mins ] 
+4. Saving our very First R Script and Environment variables .
 #
 Questions and Answers 
-[ Duration : @ 20 Mins ] 
+
 
 ### Module -2 :- 
+[ Duration : @60 Minutes ] 
 #
 #
