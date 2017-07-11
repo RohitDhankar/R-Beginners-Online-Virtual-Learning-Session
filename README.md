@@ -1,5 +1,7 @@
 ### R-Begginers-Online-Virtual-Learning-Session
 
+### Register Here :- [SIGNUP LINK](https://goo.gl/forms/JvVPYbaaN4SAj8aJ2)
+
 The Git Repo for content and code for the - Data Science India - R Begginers Online Virtual Learning Session. 
 Students / Corporate Learners who have been through earlier online sessions with me , may also benefit from this updated repository . As usual in case of any challenges reach out to me for further discussions . 
 
@@ -38,7 +40,7 @@ Questions and Answers
 [ Duration : @60 Minutes ] 
 #
 #
-1. Using the Built in HELP Commands , learning to use Vignettes and CRAN for HELP. 
+1. Using the Built in HELP Commands , learning to use Vignettes and CRAN for HELP. Accessing internal Data Sources - mtcars , iris etc . 
 #
 2. The basic Arithmetic Operators , NaN , NA etc .
 #
@@ -56,10 +58,50 @@ Questions and Answers
 #
 Questions and Answers 
 
+
 ### Module -3 :- 
 [ Duration : @60 Minutes ] 
 #
 #
+1. Intro to Data Vizualization with R. 
+
+   Learning - Scope and introductory fun ... "create your own SUPER VISUAL" !!!
+#
+2. Scatter Plots , Correlation Matrices , the plot() function . 
+#
+3. Detailing the Vanila Plots - Point Shapes , Fonts , Line Colors and Reference Lines. 
+#
+4. Creating Multiple Plots or an ARRAY of Plots . 
+#
+5. Which Plot is best suited - for what kind of Data Analysis and Visualization ? 
+#
+6. Avoid overdoing the Visual and avoiding certain kind of Plots . 
+#
+7. The HISTOGRAM - hist() and truehist() etc . 
+#
+8. Visualize a relation between Two Variables - the qqPlot() and others . 
+#
+9. Boxplots and Mosaic Plots - the various options and tweaks. 
+#
+10. The Correlation matrices and the corrplot() function. 
+#
+Questions and Answers 
+
+
+### Module -4 :- 
+[ Duration : @60 Minutes ] 
+#
+#
+1. Plots and Graphs - the par() function. 
+#
+2. Add lines , points , text , trend lines for linear regression , legends and tweak the axis axes() etc. 
+#
+3. Intro to ggplot2 and lattice. 
+#
+4. Plotting advanced data types with ggplot2 - plotting Factors , scatterplots , boxplots - the qplot() function. 
+#
+5. 
+
 
 
 
