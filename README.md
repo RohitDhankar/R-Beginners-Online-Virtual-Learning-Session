@@ -15,7 +15,9 @@ Do note basis feedback from students - the content and flow of the sessions keep
 [ Duration : @60 Minutes ] 
 
 1. Intro to R the [R Project for Statistical Analysis](https://www.r-project.org/), Intro to [R Studio](https://www.rstudio.com/) , Intro to CRAN - any other introductory exchanges. 
-#
+Kindly note we shall us the FREE Versions Only of both R and RStudio for all our Learning sessions. 
+
+
 [Download and Install R - Linux](https://ftp.iitm.ac.in/cran/bin/linux/)
 #
 [Download and Install R - Windows](https://ftp.iitm.ac.in/cran/bin/windows/base/R-3.4.1-win.exe)
@@ -24,14 +26,44 @@ Do note basis feedback from students - the content and flow of the sessions keep
 #
 [Download and Install R Studio - Windows](https://download1.rstudio.org/RStudio-1.0.143.exe)
 
-#
+
 2. Intro to Basic Data Structures in R - Array , Matrix , DataFrame and Lists .
    How to create an Array a Matrix a DataFrame and Lists . 
    Conducting our very First Basic Input Output and other computations.
+
+3. Intro to CSV files . 
+   Entering Data from a CSV file . 
+   Entering Data from the R Studio GUI vs. from R Script. 
+
+4. Basic Data Wrangling Functions :- 
+```
+install.packages(c("psych","ggplot2")) # installing multiple packages
+# Also can use the R Studio GUI to Install Packages and also LOAD already installed packages
 #
-3. Intro to CSV files . Entering Data from a CSV file . Entering Data from the R Studio GUI vs. from R Script. 
+library("psych", lib.loc="~/R/win-library/3.1")
 #
-4. Saving our very First R Script and Environment variables .
+sink(Saved_Code_File_.txt)
+#
+attach(..data..set..name..) # mostly for inbuilt data_sets
+#
+View(..data..set..name..) 
+#
+# Assign to a VARIABLE 
+#
+data1 <- read.table("C:/STAT/data1.csv", dec=",", quote="\"") ## Where data1 == (..data..set..name..)
+data2 <- read.csv("C:/STAT/data2.csv")
+#
+describeBy()
+#
+describe()
+#
+summary()
+#
+
+
+
+```
+Saving our very First R Script and Environment variables .
 #
 Questions and Answers 
 
