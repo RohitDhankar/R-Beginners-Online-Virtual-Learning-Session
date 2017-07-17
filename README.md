@@ -43,18 +43,21 @@ Questions and Answers
 1. Using the Built in HELP Commands , learning to use Vignettes and CRAN for HELP. Accessing internal Data Sources - mtcars , iris etc . 
 #
 2. The basic Arithmetic Operators , NaN , NA etc .
-#
+
 3. Intro to Logical Operators and Vectorized operations. 
-#
+
 4. R Data Structures - The ATOMIC Vector . Common operations of ...
-#
+
 5. The FACTOR , the LISTS , operations of ...
-#
-6. The DataFRAME , common Operations of DataFRAME's - specifying individual elements etc . 
-#
+
+6. The DataFRAME , common Operations of DataFRAME's - specifying individual elements etc .
+
 7. The MATRIX and Matrices , common Operations of Matrices . 
-#
+
 8. The ARRAY Data Structure .
+
+9 The LISTS - the Super Data Structure - Lists of Matrices , Lists of Lists etc ..
+
 #
 Questions and Answers 
 
@@ -101,6 +104,19 @@ Questions and Answers
 4. Plotting advanced data types with ggplot2 - plotting Factors , scatterplots , boxplots - the qplot() function. 
 #
 5. 
+
+
+### Module -5 :- 
+[ Duration : @60 Minutes ] 
+#
+#
+
+
+
+### Module -6 :- 
+[ Duration : @60 Minutes ] 
+#
+#
 
 
 
