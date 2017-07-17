@@ -62,7 +62,27 @@ describe()
 # 
 summary()
 #
-
+# HouseKeeping tasks ---
+savehistory()
+#
+save.image("C:/.///.//..RData)
+#
+getwd()
+#
+setwd()
+#
+trunc(6.9999)
+#
+floor(8.9999)
+#
+round(4.9999,digits=0)
+#
+round(6.345674321,digits=3)
+#
+log(666,base=10)
+#
+log(444,base=2)
+#
 ```
 
 The very basic [Psych package - CRAN](http://personality-project.org/r/psych-manual.pdf)
