@@ -57,12 +57,16 @@ describeBy()
 #
 describe()
 #
+## in Decsribe - the Trimmed means - the top and bottom 10% ## are ignored - thus the Trimmed Mean is smaller than the Mean 
+## - describeBy(RW) - Shows the Trimmed Mean which is smaller in value from the Mean ...
+# 
 summary()
 #
 
-
-
 ```
+
+The very basic [Psych package - CRAN](http://personality-project.org/r/psych-manual.pdf)
+
 Saving our very First R Script and Environment variables .
 #
 Questions and Answers 
