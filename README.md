@@ -175,7 +175,16 @@ Questions and Answers
 #
 
 
+### Miscellaneous Links - 
+1. [Install Latex or TexLive for UBUNTU](http://milq.github.io/install-latex-ubuntu-debian/)
+   Check Latex install on UBUNTU - 
+   ```
+   dhankar@dhankar-VPCEB44EN:~/$ whereis latex
+   latex: /usr/bin/latex /usr/share/man/man1/latex.1.gz
+   ```
+   
 
+2. 
 
 
 
