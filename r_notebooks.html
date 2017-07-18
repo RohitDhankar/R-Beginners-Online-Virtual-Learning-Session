@@ -1,0 +1,125 @@
+R Notebook
+http://rmarkdown.rstudio.com/r_notebooks.html
+
+This is an R Markdown Notebook. When you execute code within the notebook, the results appear beneath the code.
+
+Try executing this chunk by clicking the Run button within the chunk or by placing your cursor inside it and pressing Ctrl+Shift+Enter.
+
+Hide
+d1 <- 2+3
+d1
+[1] 5
+Hide
+array_1 <-array(1:24, dim=c(3,4,2))
+array_1
+, , 1
+
+     [,1] [,2] [,3] [,4]
+[1,]    1    4    7   10
+[2,]    2    5    8   11
+[3,]    3    6    9   12
+
+, , 2
+
+     [,1] [,2] [,3] [,4]
+[1,]   13   16   19   22
+[2,]   14   17   20   23
+[3,]   15   18   21   24
+Creating our very First Array
+
+Hide
+?array()
+array_1 <-array(1:24, dim=c(3,4,3))
+array_1
+, , 1
+
+     [,1] [,2] [,3] [,4]
+[1,]    1    4    7   10
+[2,]    2    5    8   11
+[3,]    3    6    9   12
+
+, , 2
+
+     [,1] [,2] [,3] [,4]
+[1,]   13   16   19   22
+[2,]   14   17   20   23
+[3,]   15   18   21   24
+
+, , 3
+
+     [,1] [,2] [,3] [,4]
+[1,]    1    4    7   10
+[2,]    2    5    8   11
+[3,]    3    6    9   12
+DIM == “Integer vector of length one or more giving the maximal indices in each dimension.” Above we have ROWS or INDEX == 3 , COLUMNS == 4 and DIMENSIONS == 3 VALUES or OBSERVATIONS are filled in COLUMNS FIRST - ROWS NEXT
+
+Hide
+is.array(array_1)
+[1] TRUE
+Hide
+array_2 <-array(1:24, dim=c(3,4))
+array_2
+     [,1] [,2] [,3] [,4]
+[1,]    1    4    7   10
+[2,]    2    5    8   11
+[3,]    3    6    9   12
+Hide
+typeof(array_2)
+[1] "integer"
+Hide
+typeof(array_1)
+[1] "integer"
+Both ARRAYS Stored as INTEGERS in Memory
+
+WHAT ARE - VECTORS — One Dimension Arrays which can hold - NUMERIC , CHARACTER or LOGICAL DATA
+# Vectors can be of THREE Types or MODES - which means the DATA TYPE they can hold.
+#
+A VECTOR is created using the - COMBINE Function()
+#
+Lets see an example of each type below -
+
+Hide
+num_vector <- c(22,22,33,33,44)
+num_vector
+[1] 22 22 33 33 44
+Hide
+char_vector <- c("x","d","c","f")
+char_vector
+[1] "x" "d" "c" "f"
+Hide
+logical_vector <- c(TRUE,FALSE,TRUE,FALSE,FALSE,FALSE)
+logical_vector  
+[1]  TRUE FALSE  TRUE FALSE FALSE FALSE
+SCALARS - One Element Vectors - useful for hlding CONSTANT values
+
+Hide
+a1 <- "FINANCE"
+b1 <- "MARKETING"
+c1 <- "SALES"
+d1 <- 3.1416
+a1
+[1] "FINANCE"
+Hide
+b1
+[1] "MARKETING"
+Hide
+c1
+[1] "SALES"
+Hide
+d1
+[1] 3.1416
+sessionInfo()
+
+R version 3.3.2 (2016-10-31) Platform: x86_64-pc-linux-gnu (64-bit) Running under: Ubuntu 16.04.1 LTS
+
+locale: [1] LC_CTYPE=en_IN.UTF-8 LC_NUMERIC=C LC_TIME=en_IN.UTF-8 LC_COLLATE=en_IN.UTF-8
+[5] LC_MONETARY=en_IN.UTF-8 LC_MESSAGES=en_IN.UTF-8 LC_PAPER=en_IN.UTF-8 LC_NAME=C
+[9] LC_ADDRESS=C LC_TELEPHONE=C LC_MEASUREMENT=en_IN.UTF-8 LC_IDENTIFICATION=C
+
+attached base packages: [1] stats graphics grDevices utils datasets methods base
+
+loaded via a namespace (and not attached): [1] backports_1.0.4 magrittr_1.5 rprojroot_1.1 htmltools_0.3.5 tools_3.3.2 base64enc_0.1-3 yaml_2.1.14
+[8] Rcpp_0.12.8 stringi_1.1.2 rmarkdown_1.3 knitr_1.15.1 jsonlite_1.1 stringr_1.1.0 digest_0.6.10
+[15] evaluate_0.10
+
+EOF - R_1.Rmd
