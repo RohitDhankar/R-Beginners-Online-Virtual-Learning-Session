@@ -28,6 +28,22 @@ Kindly note we shall us the FREE Versions Only of both R and RStudio for all our
 
 
 2. Intro to Basic Data Structures in R - Array , Matrix , DataFrame and Lists .
+   
+   ```
+   " A Dataset is a Rectangular Array of Data - ROWS == OBSERVATIONS or EXAMPLES and COLUMNS == VARIABLES or LABELS or ATTRIBUTES"
+   
+   ```
+   EMP ID == ROW or INDEX or CASE IDENTIFIER
+   EMP NAME == ROW or INDEX or CASE IDENTIFIER
+   DOJ == DATE VAR
+   DOE == DATE VAR
+   AnnualCTC == CONTINUOUS VAR
+   SEX [ M/F ] == CATEGORICAL or NOMINAL VAR [ Boolean 0 / 1 ] 
+   
+   ORDINAL == ??
+   INTERVAL VAR == ??
+   
+   
    How to create an Array a Matrix a DataFrame and Lists . 
    Conducting our very First Basic Input Output and other computations.
 
