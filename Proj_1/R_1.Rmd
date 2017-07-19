@@ -160,7 +160,7 @@ m_1
 
 ```
 
-For Data Length 34 - data being numeric values from 66 to 99 , we need to provide a "multiple" or "sub-multiple"of 5 - lets try with 17.      
+For Data Length 34 (data being numeric values from 66 to 99) , we need to provide a "multiple" or "sub-multiple"of 34 as the ROWS value - lets try with 17.      
 
 ```{r}
 
@@ -179,21 +179,38 @@ plot(m_1)
 
 ```
 
+We can also reverse the ORDER of COLUMNS and ROWS   
+
 ```{r}
 
+m_1 <- matrix(data=66:99,nrow=2,ncol=17)
+m_1
+
+
+```
+We still derive a MATRIX - m_1 , but the plot as seen below is illegible.   
+
+```{r}
+
+plot(m_1)
 
 
 ```
 
+#
+
+Weve seen the basic arguments for the Function "matrix()" above - now we look at "byrow" and "dimnames".    
+DimNames or Dimension Names can be a LIST of structure - LIST(ROW_NAMES,COLUMN_NAMES) .  
+If we have only the 1st ELEMENT of a LIST then that defaults to ROW_NAMES and if we have a 2nd ELEMENT it defaults to COLUMN_NAMES.   
+Seen below - row_names and col_names created using the COMBINE - c() , function.   
+
+
+
 ```{r}
-
-
-
-```
-
-```{r}
-
-
+row_names <- c("Row_Name_1","Row_Name_2") 
+col_names <- c("Col_Name_1","Col_Name_2")
+m_1 <- matrix(data=66:69,nrow=2,ncol=2,byrow=FALSE,dimnames=list(col_names,row_names))
+m_1
 
 ```
 sessionInfo()
