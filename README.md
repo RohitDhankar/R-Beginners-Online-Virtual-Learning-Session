@@ -58,10 +58,12 @@ Kindly note we shall us the FREE Versions Only of both R and RStudio for all our
    
    How to create an Array a Matrix a DataFrame and Lists . 
    Conducting our very First Basic Input Output and other computations.
+   #
    
-   R Scrshot_1: 
-![alt text][logo]
-[logo]: https://github.com/RohitDhankar/R-Beginners-Online-Virtual-Learning-Session/Images_R_ScreenShots/Screenshot from 2017-07-19 11-38-47.png" R SCREEN_SHOT "
+
+SCREEN_SHOT_1: 
+![alt text](https://github.com/RohitDhankar/R-Beginners-Online-Virtual-Learning-Session/blob/master/Images_R_ScreenShots/1_1.png "SCREEN_SHOT_1")
+#
 
 
 3. Intro to CSV files . 
