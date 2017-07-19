@@ -214,7 +214,7 @@ Questions and Answers
    ```
    
 
-2. 
+2. [RStudio R Markdown CheatSheet - Download the PDF](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf) 
 
 
 
