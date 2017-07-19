@@ -60,7 +60,13 @@ Kindly note we shall us the FREE Versions Only of both R and RStudio for all our
    Conducting our very First Basic Input Output and other computations.
    #
    
-   
+
+SCREEN_SHOT_1: 
+![alt text](https://github.com/RohitDhankar/R-Beginners-Online-Virtual-Learning-Session/blob/master/Images_R_ScreenShots/1_1.png "SCREEN_SHOT_1")
+#
+#
+
+
 [SCREENSHOT_1](https://github.com/RohitDhankar/R-Beginners-Online-Virtual-Learning-Session/blob/master/Images_R_ScreenShots/1_1.png) " R SCREEN_SHOT "
 #
 
