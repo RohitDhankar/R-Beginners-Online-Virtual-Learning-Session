@@ -9,12 +9,14 @@ Do note basis feedback from students - the content and flow of the sessions keep
 #
 
 
-[R_1.pdf](../blob/master/R_1.pdf)
+
 
 ### Learning Index :- 
 
 ### Module -1 :- 
 [ Duration : @60 Minutes ] 
+R Code for this Module - [R_1.pdf](../master/R_1.pdf)
+#
 
 1. Intro to R the [R Project for Statistical Analysis](https://www.r-project.org/), Intro to [R Studio](https://www.rstudio.com/) , Intro to CRAN - any other introductory exchanges. 
 Kindly note we shall us the FREE Versions Only of both R and RStudio for all our Learning sessions. 
@@ -114,6 +116,8 @@ log(444,base=2)
 The very basic [Psych package - CRAN](http://personality-project.org/r/psych-manual.pdf)
 
 Saving our very First R Script and Environment variables .
+R Code for this Module - [R_1.pdf](../master/R_1.pdf)
+
 #
 Questions and Answers 
 
