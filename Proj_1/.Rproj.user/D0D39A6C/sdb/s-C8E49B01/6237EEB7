@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "---\ntitle: \"R Notebook\"\noutput:\n  html_notebook: default\n  pdf_document: default\n---\nhttp://rmarkdown.rstudio.com/r_notebooks.html\n\nThis is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. \n\nTry executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. \n\n```{r}\n\nd1 <- 2+3\nd1\n\narray_1 <-array(1:24, dim=c(3,4,2))\narray_1\n```\nCreating our very First Array \n\n```{r}\n?array()\n\narray_1 <-array(1:24, dim=c(3,4,3))\narray_1\n```\n\nDIM == \"Integer vector of length one or more giving the maximal indices in each dimension.\"\nAbove we have ROWS or INDEX == 3 , COLUMNS == 4 and DIMENSIONS == 3\nVALUES or OBSERVATIONS are filled in COLUMNS FIRST - ROWS NEXT \n\n\n\n```{r}\nis.array(array_1)\n```\n\n\n```{r}\narray_2 <-array(1:24, dim=c(3,4))\narray_2\n\n\n```\n\n\n```{r}\n\ntypeof(array_2)\n\n```\n\n\n```{r}\ntypeof(array_1)\n\n```\nBoth ARRAYS Stored as INTEGERS in Memory \n\n```{r}\n\n\n```\n\nWHAT ARE - VECTORS --- One Dimension Arrays which can hold - NUMERIC , CHARACTER or LOGICAL DATA  \n#\nVectors can be of THREE Types or MODES - which means the DATA TYPE they can hold.  \n#  \nA VECTOR is created using the - COMBINE Function()  \n#  \nLets see an example of each type below -   \n\n\n```{r}\nnum_vector <- c(22,22,33,33,44)\nnum_vector\nchar_vector <- c(\"x\",\"d\",\"c\",\"f\")\nchar_vector\nlogical_vector <- c(TRUE,FALSE,TRUE,FALSE,FALSE,FALSE)\nlogical_vector  \n\n```\n\nSCALARS - One Element Vectors - useful for holding CONSTANT values \n\n```{r}\na1 <- \"FINANCE\"\nb1 <- \"MARKETING\"\nc1 <- \"SALES\"\nd1 <- 3.1416\na1\nb1\nc1\nd1\n\n```\n\nWe refer ELEMENTS of a VECTOR by mentioning their INDEX - STARTING at 1 \n\n```{r}\n\n\n\n```\n\n```{r}\n\n\n\n```\n\n```{r}\n\n\n\n```\n\n \n```{r}\n\n\n\n```\n\n\n```{r}\n\n\n\n```\n\n\n```{r}\n\n\n\n```\n\n```{r}\n\n\n\n```\n\n```{r}\n\n\n\n```\n\n```{r}\n\n\n\n```\n\n```{r}\n\n\n\n```\n\n```{r}\n\n\n\n```\nsessionInfo()\n  \nR version 3.3.2 (2016-10-31)\nPlatform: x86_64-pc-linux-gnu (64-bit)\nRunning under: Ubuntu 16.04.1 LTS\n\nlocale:\n [1] LC_CTYPE=en_IN.UTF-8       LC_NUMERIC=C               LC_TIME=en_IN.UTF-8        LC_COLLATE=en_IN.UTF-8    \n [5] LC_MONETARY=en_IN.UTF-8    LC_MESSAGES=en_IN.UTF-8    LC_PAPER=en_IN.UTF-8       LC_NAME=C                 \n [9] LC_ADDRESS=C               LC_TELEPHONE=C             LC_MEASUREMENT=en_IN.UTF-8 LC_IDENTIFICATION=C       \n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] backports_1.0.4 magrittr_1.5    rprojroot_1.1   htmltools_0.3.5 tools_3.3.2     base64enc_0.1-3 yaml_2.1.14    \n [8] Rcpp_0.12.8     stringi_1.1.2   rmarkdown_1.3   knitr_1.15.1    jsonlite_1.1    stringr_1.1.0   digest_0.6.10  \n[15] evaluate_0.10  \n\n  \nEOF - R_1.Rmd\n\n",
+    "created" : 1500377408962.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3182626206",
+    "id" : "6237EEB7",
+    "lastKnownWriteTime" : 1500444503,
+    "last_content_update" : 1500444503119,
+    "path" : "~/Desktop/R_Own/Proj_1/R_1.Rmd",
+    "project_path" : "R_1.Rmd",
+    "properties" : {
+        "chunk_output_type" : "inline",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}
