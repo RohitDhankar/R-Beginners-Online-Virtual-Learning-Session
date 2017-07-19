@@ -97,55 +97,84 @@ d1
 
 ```
 
-We refer ELEMENTS of a VECTOR by mentioning their INDEX - STARTING at 1 
+We refer ELEMENTS of a VECTOR by mentioning their INDEX - STARTING at 1   
+
+Take an example of the "num_vector" from above , we REFER the 1st ELEMENT - Element 1 as below , assign it to a VAR "nm_1" and then print the value stored within the VAR :-   
+
 
 ```{r}
 
-
+nm_1 <- num_vector[1]
+nm_1
 
 ```
+Below we refer value stored in Elements - 2,3 and 5 , the values as seen below are - 22, 33 and 44   
+
+
+```{r}
+nm_2 <- num_vector[2]
+nm_3 <- num_vector[3]
+nm_5 <- num_vector[5]
+
+nm_2
+nm_3
+nm_5
+
+```
+
+We can also access a RANGE of elements by refering the INDEX of START and STOP Elements :-   
+
 
 ```{r}
 
-
-
-```
-
-```{r}
-
-
+nm_range <- num_vector[2:5]
+nm_range
 
 ```
+
+MATRICES ( Plural) MATRIX (Singular) - again like a VECTOR can store values in elements of the SAME MODE or SAME TYPE .  
+
+Matrices are TWO DIMENSIONAL ARRAYS of Data .   
 
  
 ```{r}
-
-
-
+?matrix()
 ```
+matrix(data = NA, nrow = 1, ncol = 1, byrow = FALSE, dimnames = NULL)  
 
 
 ```{r}
 
+m_1 <- matrix(data=66:99,nrow=2,ncol=2)
+m_1
+
+```
+Data set has been truncated as we didnt mention enough ROWS for the MATRIX , lets try again with 5 ROWS ....   
+  
+  
+```{r}
+
+m_1 <- matrix(data=66:99,nrow=5,ncol=2)
+m_1
 
 
 ```
 
+For Data Length 34 - data being numeric values from 66 to 99 , we need to provide a "multiple" or "sub-multiple"of 5 - lets try with 17.      
 
 ```{r}
 
+m_1 <- matrix(data=66:99,nrow=17,ncol=2)
+m_1
 
 
 ```
 
-```{r}
-
-
-
-```
+As seen above now the MATRIX - m_1 , can fit in the Data Values just fine with - 17 ROWS and 2 COLUMNS.   
 
 ```{r}
 
+plot(m_1)
 
 
 ```
