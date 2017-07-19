@@ -9,6 +9,8 @@ Do note basis feedback from students - the content and flow of the sessions keep
 #
 
 
+[R_1.pdf](../blob/master/R_1.pdf)
+
 ### Learning Index :- 
 
 ### Module -1 :- 
