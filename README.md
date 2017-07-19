@@ -61,7 +61,7 @@ Kindly note we shall us the FREE Versions Only of both R and RStudio for all our
    #
    
    
-[SCREENSHOT_1](https://github.com/RohitDhankar/R-Beginners-Online-Virtual-Learning-Session/Images_R_ScreenShots/1_1.png) " R SCREEN_SHOT "
+[SCREENSHOT_1](https://github.com/RohitDhankar/R-Beginners-Online-Virtual-Learning-Session/blob/master/Images_R_ScreenShots/1_1.png) " R SCREEN_SHOT "
 #
 
 
