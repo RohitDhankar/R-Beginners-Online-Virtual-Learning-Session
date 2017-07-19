@@ -15,7 +15,7 @@ Do note basis feedback from students - the content and flow of the sessions keep
 
 ### Module -1 :- 
 [ Duration : @60 Minutes ] 
-R Code for this Module - [R_1.pdf](../master/R_1.pdf)
+R Code for this Module - [R_1.pdf](../master/R_1.pdf) , [R_2.pdf](../master/R_2.pdf) ... 
 #
 
 1. Intro to R the [R Project for Statistical Analysis](https://www.r-project.org/), Intro to [R Studio](https://www.rstudio.com/) , Intro to CRAN - any other introductory exchanges. 
@@ -65,6 +65,8 @@ SCREEN_SHOT_1:
 ![alt text](https://github.com/RohitDhankar/R-Beginners-Online-Virtual-Learning-Session/blob/master/Images_R_ScreenShots/1_1.png "SCREEN_SHOT_1")
 #
 
+SCREEN_SHOT_2: 
+![alt text](../master/Images_R_ScreenShots/1_2.png "SCREEN_SHOT_2")
 
 3. Intro to CSV files . 
    Entering Data from a CSV file . 
