@@ -276,7 +276,7 @@ Also as seen above -- within the display of df_1 - the column names have the TYP
 
 Also this can be seen as such within the RIGHT PANEL of RSTudio in the ENVIRONEMENT >> Global Environment - section.    
 
-Kindly note that SCREENSHOTS of these can be seen within the GITHUB Repository Read Me file and poath- "https://github.com/RohitDhankar/R-Beginners-Online-Virtual-Learning-Session/tree/master/Images_R_ScreenShots"
+Kindly note that SCREENSHOTS of these can be seen within the GITHUB Repository Read Me file and path- "https://github.com/RohitDhankar/R-Beginners-Online-Virtual-Learning-Session/tree/master/Images_R_ScreenShots"
 
 #  
 
@@ -335,9 +335,6 @@ df_4
 ```
 
 A basic plot() of the DataFrame.   
-
-
-
 
 
 ```{r}
