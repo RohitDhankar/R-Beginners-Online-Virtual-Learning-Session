@@ -1,0 +1,214 @@
+---
+title: "R_Code_1.Rmd"
+author: "Rohit Dhankar"
+date: "20 July 2017"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+This is the 2nd in series of R Code Files.     
+
+
+Refer the GitHub Repository , for all Code files ---> https://github.com/RohitDhankar/R-Beginners-Online-Virtual-Learning-Session    
+
+
+Its a good practise from time to time to keep a track of our current Working Directory and list out all the Objects in our R ENVIRONMENT - specially so when we are committing changes to a Git Remote.   
+
+
+```{r}
+
+getwd()
+#
+ls()
+
+```
+
+We could remove any object with command - rm("Object Name")  
+
+We can also use print() , to view any objects stored value.  
+
+
+```{r}
+# Code Section -1 
+#print(a1)
+#
+#print(char_vector)
+#
+
+```
+
+Going further with VECTORS .   
+
+We combine two or more vectors to get another vector .  
+
+
+```{r}
+# Code Section -2
+num_vector <- c(22,22,33,33,44)
+print(num_vector)
+num_vector1 <- c(11,12,13,14,15)
+#
+num_vector3 <- c(num_vector,num_vector1)
+print(num_vector3)
+```
+
+Some basic Maths and Stats with VECTORS.  
+
+
+```{r}
+# Code Section -3
+num_vector3 + 5
+
+# Adds NUMERIC VALUE = 5 to all ELEMENTS of the Num Vector. 
+
+```
+
+
+
+```{r}
+# Code Section -4
+
+num_vector1 * num_vector3
+# First 5 elements of - num_vector3 multiplied by the Five Elements of num_vector1 and again the Next 5 elements of num_vector3 multiplied by the Five Elements of num_vector1
+
+```
+
+Check out the LENGTH of a VECTOR with length()   
+
+
+```{r}
+# Code Section -5
+
+length(num_vector1 * num_vector3)
+```
+
+
+
+
+```{r}
+# Code Section -6
+
+#num_vector1 %*% num_vector3 # Error in num_vector1 %*% num_vector3 : non-conformable arguments
+
+# Vectors are not of same Length above - below they are of same length 
+
+nv <- c(1,2,3,4,5)
+nv1 <- c(6,7,8,9,10)
+
+nv %*% nv1 # Inner Product of same Length Vectors
+
+# Algeberic Dot Product as defined by WikiPedia - "https://en.wikipedia.org/wiki/Dot_product"
+
+
+```
+
+Operate upon a ELEMENT of the Vector.  
+
+```{r}
+# Code Section -7
+
+
+log(num_vector3[2]) # Log Base 2 of 22 
+#
+log(22)
+#
+
+
+```
+
+
+
+```{r}
+# Code Section -8
+
+```
+
+
+
+```{r}
+# Code Section -9
+
+```
+
+
+
+
+```{r}
+# Code Section -10
+
+```
+
+
+
+
+```{r}
+# Code Section -11
+
+```
+
+
+
+```{r}
+# Code Section -12
+
+```
+
+
+
+```{r}
+# Code Section -13
+
+```
+
+
+
+```{r}
+# Code Section -14
+
+```
+
+
+
+```{r}
+# Code Section -15
+
+```
+
+
+
+```{r}
+# Code Section -16
+
+```
+
+
+
+```{r}
+# Code Section -17
+
+```
+
+
+sessionInfo()
+  
+R version 3.3.2 (2016-10-31)
+Platform: x86_64-pc-linux-gnu (64-bit)
+Running under: Ubuntu 16.04.1 LTS
+
+locale:
+ [1] LC_CTYPE=en_IN.UTF-8       LC_NUMERIC=C               LC_TIME=en_IN.UTF-8        LC_COLLATE=en_IN.UTF-8    
+ [5] LC_MONETARY=en_IN.UTF-8    LC_MESSAGES=en_IN.UTF-8    LC_PAPER=en_IN.UTF-8       LC_NAME=C                 
+ [9] LC_ADDRESS=C               LC_TELEPHONE=C             LC_MEASUREMENT=en_IN.UTF-8 LC_IDENTIFICATION=C       
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+loaded via a namespace (and not attached):
+ [1] backports_1.0.4 magrittr_1.5    rprojroot_1.1   htmltools_0.3.5 tools_3.3.2     base64enc_0.1-3 yaml_2.1.14    
+ [8] Rcpp_0.12.8     stringi_1.1.2   rmarkdown_1.3   knitr_1.15.1    jsonlite_1.1    stringr_1.1.0   digest_0.6.10  
+[15] evaluate_0.10  
+
+  
+EOF - R_Code_1.Rmd
+

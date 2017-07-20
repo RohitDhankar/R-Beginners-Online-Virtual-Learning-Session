@@ -347,6 +347,7 @@ plot(df_3)
 ```{r}
 
 
+
 ```
 
 sessionInfo()
@@ -369,5 +370,5 @@ loaded via a namespace (and not attached):
 [15] evaluate_0.10  
 
   
-EOF - R_1.Rmd
+EOF - R_Code.Rmd
 

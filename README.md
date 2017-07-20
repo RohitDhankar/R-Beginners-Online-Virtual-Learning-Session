@@ -289,12 +289,17 @@ R Code for this Module - [R_Code_1.pdf](../master/R_Code_1.pdf) ...
 2. [RStudio R Markdown CheatSheet - Download the PDF](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf) 
 
 
-#
-If youre Pushing a lot of Commits to your GitHub repo and like me dont like entering your Auth credentials again - do this --- 
+
+3. If youre Pushing a lot of Commits to your GitHub repo and like me dont like entering your Auth credentials again - do this --- 
 
 ```
 dhankar@dhankar-VPCEB44EN:~/Desktop/R_Own$ git config credential.helper store
 
 ```
+
+Source - "https://git-scm.com/docs/git-credential-store"
+
+
+4. The - Algebraic definition- of the Dot Product as defined by WikiPedia --- "https://en.wikipedia.org/wiki/Dot_product"
 
 
