@@ -15,7 +15,7 @@ Do note basis feedback from students - the content and flow of the sessions keep
 
 ### Module -1 :- 
 [ Duration : @60 Minutes ] 
-R Code for this Module - [R_1.pdf](../master/R_1.pdf) , [R_2.pdf](../master/R_2.pdf) ... 
+R Code for this Module - [R_4.pdf](../master/R_4.pdf) ... 
 #
 
 1. Intro to R the [R Project for Statistical Analysis](https://www.r-project.org/), Intro to [R Studio](https://www.rstudio.com/) , Intro to CRAN - any other introductory exchanges. 
@@ -62,15 +62,30 @@ Kindly note we shall us the FREE Versions Only of both R and RStudio for all our
    
 
 SCREEN_SHOT_1: 
-![alt text](https://github.com/RohitDhankar/R-Beginners-Online-Virtual-Learning-Session/blob/master/Images_R_ScreenShots/1_1.png "SCREEN_SHOT_1")
+![alt text](../master/Images_R_ScreenShots/1_1.png "SCREEN_SHOT_1")
 #
 
 SCREEN_SHOT_2: 
 ![alt text](../master/Images_R_ScreenShots/1_2.png "SCREEN_SHOT_2")
+#  
+
+SCREEN_SHOT_3: 
+![alt text](../master/Images_R_ScreenShots/1_3.png "SCREEN_SHOT_3")
+#  
+
+SCREEN_SHOT_4: 
+![alt text](../master/Images_R_ScreenShots/1_4.png "SCREEN_SHOT_4")
+#  
+
+SCREEN_SHOT_5: 
+![alt text](../master/Images_R_ScreenShots/1_5.png "SCREEN_SHOT_5")
+#  
+
 
 3. Intro to CSV files . 
    Entering Data from a CSV file . 
    Entering Data from the R Studio GUI vs. from R Script. 
+   R Code for this Module - [R_4.pdf](../master/R_4.pdf) ... 
 
 4. Basic Data Wrangling Functions :- 
 ```
