@@ -81,6 +81,15 @@ SCREEN_SHOT_5:
 ![alt text](../master/Images_R_ScreenShots/1_5.png "SCREEN_SHOT_5")
 #  
 
+SCREEN_SHOT_6: 
+![alt text](../master/Images_R_ScreenShots/1_6.png "SCREEN_SHOT_6")
+#  
+
+SCREEN_SHOT_7: 
+![alt text](../master/Images_R_ScreenShots/1_7.png "SCREEN_SHOT_7")
+#  
+
+
 
 3. Intro to CSV files . 
    Entering Data from a CSV file . 
