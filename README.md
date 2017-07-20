@@ -89,6 +89,14 @@ SCREEN_SHOT_7:
 ![alt text](../master/Images_R_ScreenShots/1_7.png "SCREEN_SHOT_7")
 #  
 
+SCREEN_SHOT_8: 
+![alt text](../master/Images_R_ScreenShots/1_8.png "SCREEN_SHOT_8")
+#  
+
+SCREEN_SHOT_9: 
+![alt text](../master/Images_R_ScreenShots/1_9.png "SCREEN_SHOT_9")
+#  
+
 
 
 3. Intro to CSV files . 
