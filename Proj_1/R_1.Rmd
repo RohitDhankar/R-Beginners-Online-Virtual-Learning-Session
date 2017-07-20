@@ -221,29 +221,75 @@ As seen above when we dont specify ROW and COLUMN names we see a DIFFERENT Notat
 m_1 <- matrix(data=66:69,nrow=2,ncol=2)
 m_1
 
-
-
 ```
+The ROWS are represented by INDEX of the kind -- [1,] [2,]   
 
+The COLUMNS with -- [,1] [,2]  
+
+Thus the MATRIX values,  can also be accessed in this manner as seen below ...    
 
 
 ```{r}
 
+m_1[1,1]
+#
+m_1[1,2]
+#
+m_1[2,1]
+#
+m_1[2,2]
+```
+
+Weve seen examples of VECTORS and MATRICES in the above sections .   
+  
+  Both MATRICES and VECTORS can store data of only 1 Mode or TYPE and are Both 2D or TWO DIMENSIONAL in shape .  
+  
+  We have also seen ARRAYS which are again SINGLE MODE or TYPE but 3D or THREE DIMENSIONAL in shape .  
+  
+  In the section below we look at DATAFRAMES - which we probably end up using the most in our day to day analysis as they can hold MULTIPLE TYPES of DATA or are MULTIMODE in structure.   
+  
+  
+  We shall import a .CSV File to begin with and create a DATAFRAME from the same    
+  
+  We also at a later stage look at creating own DataFrames from Manual inputs within R     
+  
+  ?read.csv() 
+  
+  read.csv(file, header = TRUE, sep = ",", quote = "\"",
+         dec = ".", fill = TRUE, comment.char = "", ...)
+
+```{r}
+
+df_1 <- read.csv("~/Desktop/R_Own/R_1 - Sheet1.csv",header =TRUE , sep = "," )
+df_1
 
 ```
+
+As seen above there are various ways of reading in the Data from the .CSV format .    
+
+We used the read.csv() function which is present within the {utils} inbuilt package and is shipped along with - read.table() , read.csv2() , read.delim() and read.delim2()   
+
+
+We shall mostly be using - read.csv() and read.table()   
+
+Also as seen above -- within the display of df_1 - the column names have the TYPE or MODE mentioned below - the "fctr" is the FACTOR , the "int" being the INTEGER etc .    
+
+Also this can be seen as such within the RIGHT PANEL of RSTudio in the ENVIRONEMENT >> Global Environment - section.    
+
+Kindly note that SCREENSHOTS of these can be seen within the GITHUB Repository Read Me file and poath- "https://github.com/RohitDhankar/R-Beginners-Online-Virtual-Learning-Session/tree/master/Images_R_ScreenShots"
+
+#  
+
+We need not mention the DEFAULTS and as seen below read.csv() - would work as well with just - the file path of the file.   
 
 
 ```{r}
 
+df_2 <- read.csv("~/Desktop/R_Own/R_1 - Sheet1.csv")
+df_2
 
 ```
 
-
-
-```{r}
-
-
-```
 
 
 
