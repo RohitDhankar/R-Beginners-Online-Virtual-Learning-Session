@@ -117,10 +117,39 @@ log(22)
 
 ```
 
+Converting a CHAR Vector into a NUMERIC Vector .   
 
 
 ```{r}
 # Code Section -8
+ch_v <- c("11","12","13","14","15")
+#
+class(ch_v)
+#ch_v + 2 # Error in ch_v + 2 : non-numeric argument to binary operator
+# Cant do a Math operation on CHAR Vector - lets Convert into NUM Vector 
+#
+nm_v <- as.numeric(ch_v)
+#
+class(nm_v)
+nm_v + 2 
+#
+print("Summary of the Num Vector as below :- ")
+summary(nm_v+2)
+#
+summary(nm_v+5)
+#
+sum(nm_v+5)
+#
+sd(nm_v+5)
+#
+max(nm_v+5)
+#
+min(nm_v+5)
+#
+mean(nm_v+5)
+#
+median(nm_v+5)
+#
 
 ```
 
@@ -129,6 +158,8 @@ log(22)
 ```{r}
 # Code Section -9
 
+plot(nm_v + 5)
+
 ```
 
 
@@ -136,6 +167,7 @@ log(22)
 
 ```{r}
 # Code Section -10
+
 
 ```
 

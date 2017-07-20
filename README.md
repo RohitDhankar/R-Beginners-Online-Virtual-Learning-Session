@@ -190,7 +190,7 @@ Questions and Answers
 ### Module -2 :- 
 [ Duration : @60 Minutes ] 
 #
-R Code for this Module - [R_Code.pdf](../master/R_Code.pdf) ... 
+R Code for this Module - [R_Code.pdf](../master/R_Code.pdf) ... and... [R_Code_1.pdf](../master/R_Code_1.pdf) ... 
 #
 1. Using the Built in HELP Commands , learning to use Vignettes and CRAN for HELP. Accessing internal Data Sources - mtcars , iris etc . 
 #
@@ -217,7 +217,7 @@ Questions and Answers
 ### Module -3 :- 
 [ Duration : @60 Minutes ] 
 #
-R Code for this Module - [R_Code.pdf](../master/R_Code.pdf) ... 
+R Code for this Module - [R_Code_1.pdf](../master/R_Code_1.pdf) ... 
 #
 1. Intro to Data Vizualization with R. 
 
@@ -247,7 +247,7 @@ Questions and Answers
 ### Module -4 :- 
 [ Duration : @60 Minutes ] 
 #
-R Code for this Module - [R_Code.pdf](../master/R_Code.pdf) ... 
+R Code for this Module - [R_Code_1.pdf](../master/R_Code_1.pdf) ... 
 #
 1. Plots and Graphs - the par() function. 
 #
