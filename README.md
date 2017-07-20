@@ -10,12 +10,11 @@ Do note basis feedback from students - the content and flow of the sessions keep
 
 
 
-
 ### Learning Index :- 
 
 ### Module -1 :- 
 [ Duration : @60 Minutes ] 
-R Code for this Module - [R_4.pdf](../master/R_4.pdf) ... 
+R Code for this Module - [R_Code.pdf](../master/R_Code.pdf) ... 
 #
 
 1. Intro to R the [R Project for Statistical Analysis](https://www.r-project.org/), Intro to [R Studio](https://www.rstudio.com/) , Intro to CRAN - any other introductory exchanges. 
@@ -97,12 +96,38 @@ SCREEN_SHOT_9:
 ![alt text](../master/Images_R_ScreenShots/1_9.png "SCREEN_SHOT_9")
 #  
 
+SCREEN_SHOT_10: 
+![alt text](../master/Images_R_ScreenShots/1_10.png "SCREEN_SHOT_10")
+#  
+
+SCREEN_SHOT_11: 
+![alt text](../master/Images_R_ScreenShots/1_11.png "SCREEN_SHOT_11")
+#  
+
+SCREEN_SHOT_12: 
+![alt text](../master/Images_R_ScreenShots/1_12.png "SCREEN_SHOT_12")
+#  
+
+
+SCREEN_SHOT_13: 
+![alt text](../master/Images_R_ScreenShots/1_13.png "SCREEN_SHOT_13")
+#  
+
+
+SCREEN_SHOT_14: 
+![alt text](../master/Images_R_ScreenShots/1_14.png "SCREEN_SHOT_14")
+#  
+
+
+SCREEN_SHOT_15: 
+![alt text](../master/Images_R_ScreenShots/1_15.png "SCREEN_SHOT_15")
+#  
 
 
 3. Intro to CSV files . 
    Entering Data from a CSV file . 
    Entering Data from the R Studio GUI vs. from R Script. 
-   R Code for this Module - [R_4.pdf](../master/R_4.pdf) ... 
+   R Code for this Module - [R_Code.pdf](../master/R_Code.pdf) ... 
 
 4. Basic Data Wrangling Functions :- 
 ```
@@ -157,7 +182,6 @@ log(444,base=2)
 The very basic [Psych package - CRAN](http://personality-project.org/r/psych-manual.pdf)
 
 Saving our very First R Script and Environment variables .
-R Code for this Module - [R_1.pdf](../master/R_1.pdf)
 
 #
 Questions and Answers 
@@ -166,6 +190,7 @@ Questions and Answers
 ### Module -2 :- 
 [ Duration : @60 Minutes ] 
 #
+R Code for this Module - [R_Code.pdf](../master/R_Code.pdf) ... 
 #
 1. Using the Built in HELP Commands , learning to use Vignettes and CRAN for HELP. Accessing internal Data Sources - mtcars , iris etc . 
 #
@@ -192,6 +217,7 @@ Questions and Answers
 ### Module -3 :- 
 [ Duration : @60 Minutes ] 
 #
+R Code for this Module - [R_Code.pdf](../master/R_Code.pdf) ... 
 #
 1. Intro to Data Vizualization with R. 
 
@@ -221,6 +247,7 @@ Questions and Answers
 ### Module -4 :- 
 [ Duration : @60 Minutes ] 
 #
+R Code for this Module - [R_Code.pdf](../master/R_Code.pdf) ... 
 #
 1. Plots and Graphs - the par() function. 
 #
@@ -236,6 +263,7 @@ Questions and Answers
 ### Module -5 :- 
 [ Duration : @60 Minutes ] 
 #
+R Code for this Module - [R_Code_1.pdf](../master/R_Code_1.pdf) ... 
 #
 
 
@@ -243,6 +271,9 @@ Questions and Answers
 ### Module -6 :- 
 [ Duration : @60 Minutes ] 
 #
+R Code for this Module - [R_Code_1.pdf](../master/R_Code_1.pdf) ... 
+#
+
 #
 
 
@@ -257,5 +288,13 @@ Questions and Answers
 
 2. [RStudio R Markdown CheatSheet - Download the PDF](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf) 
 
+
+#
+If youre Pushing a lot of Commits to your GitHub repo and like me dont like entering your Auth credentials again - do this --- 
+
+```
+dhankar@dhankar-VPCEB44EN:~/Desktop/R_Own$ git config credential.helper store
+
+```
 
 
