@@ -55,6 +55,11 @@ typeof(array_2)
 
 ```{r}
 typeof(array_1)
+# 
+# We can also look at the CLASS of an Object
+#
+class(array_1)
+
 
 ```
 Both ARRAYS Stored as INTEGERS in Memory 
