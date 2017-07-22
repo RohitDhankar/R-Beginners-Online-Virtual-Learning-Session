@@ -217,7 +217,7 @@ boxplot(percent_1,percent_2,percent_3,col = col_boxes,
 # we shall come back for details later in this text
 ```
 
-# Rainbox Boxplots - 
+# rainbow() for Coloring Boxplots - 
 
 ```{r}
 
@@ -353,7 +353,7 @@ ma4
 #m3 <- rbind(m1,m2)
 
 # # As seen below we need to have same ROW Numbers to do a RBIND
-m3 <- cbind(m1,m2)
+#m3 <- cbind(m1,m2)
 
 ```
 
