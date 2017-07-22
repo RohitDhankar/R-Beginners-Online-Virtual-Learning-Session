@@ -1,11 +1,13 @@
 ---
-title: "R_Code_1.Rmd"
-author: "Rohit Dhankar"
-date: "20 July 2017"
+title: "R Notebook"
 output:
   pdf_document: default
-  html_document: default
+  html_notebook: default
 ---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
 
 This is the 2nd in series of R Code Files.     
 
@@ -13,8 +15,9 @@ This is the 2nd in series of R Code Files.
 Refer the GitHub Repository , for all Code files ---> https://github.com/RohitDhankar/R-Beginners-Online-Virtual-Learning-Session    
 
 
-Its a good practise from time to time to keep a track of our current Working Directory and list out all the Objects in our R ENVIRONMENT - specially so when we are committing changes to a Git Remote.   
+Its a good practice from time to time to keep a track of our current Working Directory and list out all the Objects in our R ENVIRONMENT - specially so when we are committing changes to a Git Remote.   
 
+# VECTOR Operations
 
 ```{r}
 
@@ -183,11 +186,14 @@ boxplot(percent_1,col = "red",horizontal = TRUE,
 Wiki reference -- Percentile Rank -  "https://en.wikipedia.org/wiki/Percentile_rank" 
 #
 
+# Intro to ANOVA and BOXPLOTS 
+
 We also carry out ONE Way ANOVA or ANALYSIS of VARIANCE test with the BOX 
 and WHISKERS plots as seen below :- 
 
 ```{r}
 # Code Section -9
+library(graphics)
 
 nmv_q <- c(10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,100)
 percent_1 <- quantile(nmv_q, c(.50,.75,.84, .97, .99))
@@ -209,91 +215,164 @@ boxplot(percent_1,percent_2,percent_3,col = col_boxes,
 # Kindly note the Quantiles are randomly chosen here 
 # this is not the best way to choose quantiles 
 # we shall come back for details later in this text
+```
+
+# Rainbox Boxplots - 
+
+```{r}
+
+percent_4 <- quantile(nmv_q, c(.16, .40, .50,.95,.99))
+percent_4 
+
+
+percent_5 <- quantile(nmv_q, c(.16, .24,.32 ,.40,.75))
+percent_5 
+
+percent_6 <- quantile(nmv_q, c(.1, .5, .26, .45, .60))
+percent_6 
+
+
+percent_7 <- quantile(nmv_q, c(.3, .7, .18, .43, .70))
+percent_7 
+
+
+col_rainbow <- rainbow(7)
+
+boxplot(percent_1,percent_2,percent_3,percent_4,percent_5,percent_6,percent_7,col = col_rainbow,
+        names = c("perc_1","perc_2","perc_3","perc_4","perc_5","perc_6","perc_7"),horizontal = TRUE,
+        main = "Box and Whisker Plot of Quantiles",
+        xlab = "Quantile Values")
+
 
 ```
 
 
+
+
+```{r}
+
+# Just for Fun a PIE Graph --- you always 
+# need to avoid PIE Graphs 
+
+
+pie(rep(1, 7), col = rainbow(7))
+
+```
+
+# MATRICE Operations - TRANSPOSE of a MATRIX 
+
+Coming back to MATRICES lets further look at some MATRIX Operations :- 
 
 
 ```{r}
 # Code Section -10
 
+m1 <- matrix(data=66:69,nrow=2,ncol=2)
+m1
+
+# Lets now TRANSPOSE this MATRIX - for more on TRANSPOSE of MATRICES 
+# kindly refer this Wiki Link -- https://en.wikipedia.org/wiki/Transpose
 
 
+t(m1)
 
+# As seen below - the DIAGONAL Elements remain as -is . 
+# 66 and 69 do not move . 
+# 67 and 68 switch places , thus giving us a Transpose Matrix. 
+
+# Lets look at another example of TRANSPOSE ....
+
+m2 <- matrix(data=10:25,nrow=4,ncol=4) 
+m2
+class(m2)
+
+## Note  in the above sequence - 10:25 - both 10 and 25 are included. 
+# Lets now TRANSPOSE this MATRIX - for more on TRANSPOSE of MATRICES 
+# kindly refer this Wiki Link -- https://en.wikipedia.org/wiki/Transpose
+
+t(m2)
+
+# As seen below - the DIAGONAL Elements remain as-is. 
+# 10, 15 , 20 , 25 -- do not move . 
+# Non Diagonal elements are Transposed ,giving the Transpose Matrix. 
 
 ```
-
-
-
+# The Semicolon Notation - RANGE  or SEQUENCE
 
 ```{r}
 # Code Section -11
 
+# Quick recap of the SEQUENCE 
+
+a_seq <- 66:69 
+a_seq 
+
+# In the earlier section we create a MATRIX by using a sequence within the COMBINE function
+# We can also use the - seq - sequence function as seen below 
+
+b_seq <- seq(from=66, to=69, by=1)
+b_seq
+
+#
+
+b_seq <- seq(from=66, to=69, by=2)
+b_seq
+
+#
+
+c_seq <- seq(from=1, to=10, by=2)
+c_seq
+class(c_seq)
+
 ```
 
+# The CBIND and RBIND Functions 
+
+We can COLUMN Bind and ROW Bind more than one data structures as seen below - 
+```{r}
+
+ma1 <- matrix(data=10:15,nrow=3,ncol=2) 
+ma1
+#
+class(ma1)
+#
+ma2 <- matrix(data=20:25,nrow=3,ncol=2) 
+ma2
+#
+class(ma2)
+
+# ROW Bind the Matrices 
+ma3 <- rbind(ma1,ma2)
+ma3
+#
+# COLUMN Bind the Matrices 
+ma4 <- cbind(ma1,ma2)
+ma4
+
+# As seen below we need to have same COLUMN Numbers to do a RBIND
+#m3 <- rbind(m1,m2)
+
+# # As seen below we need to have same ROW Numbers to do a RBIND
+m3 <- cbind(m1,m2)
+
+```
+
+ROW Bind Two Data Frames - 
+
+```{r}
+
+
+
+```
 
 
 ```{r}
-# Code Section -12
 
 ```
-
 
 
 ```{r}
-# Code Section -13
 
 ```
 
-
-
-```{r}
-# Code Section -14
-
-```
-
-
-
-```{r}
-# Code Section -15
-
-```
-
-
-
-```{r}
-# Code Section -16
-
-```
-
-
-
-```{r}
-# Code Section -17
-
-```
-
-
-sessionInfo()
-  
-R version 3.3.2 (2016-10-31)
-Platform: x86_64-pc-linux-gnu (64-bit)
-Running under: Ubuntu 16.04.1 LTS
-
-locale:
- [1] LC_CTYPE=en_IN.UTF-8       LC_NUMERIC=C               LC_TIME=en_IN.UTF-8        LC_COLLATE=en_IN.UTF-8    
- [5] LC_MONETARY=en_IN.UTF-8    LC_MESSAGES=en_IN.UTF-8    LC_PAPER=en_IN.UTF-8       LC_NAME=C                 
- [9] LC_ADDRESS=C               LC_TELEPHONE=C             LC_MEASUREMENT=en_IN.UTF-8 LC_IDENTIFICATION=C       
-
-attached base packages:
-[1] stats     graphics  grDevices utils     datasets  methods   base     
-
-loaded via a namespace (and not attached):
- [1] backports_1.0.4 magrittr_1.5    rprojroot_1.1   htmltools_0.3.5 tools_3.3.2     base64enc_0.1-3 yaml_2.1.14    
- [8] Rcpp_0.12.8     stringi_1.1.2   rmarkdown_1.3   knitr_1.15.1    jsonlite_1.1    stringr_1.1.0   digest_0.6.10  
-[15] evaluate_0.10  
-
-  
-EOF - R_Code_1.Rmd
 
