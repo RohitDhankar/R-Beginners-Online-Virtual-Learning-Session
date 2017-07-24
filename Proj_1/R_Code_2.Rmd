@@ -561,15 +561,22 @@ The ATTACH will pull in a Data Set from the DataSet Package into our R Search Pa
 
 ?attach()
 
-# Quoting below from inbuilt HELP - 
-# The database is attached to the R search path. This means that the database is searched by R when evaluating a variable, so objects in the database can be accessed by simply giving their names.
+# # Quoting below from inbuilt HELP - 
+# # The database is attached to the R search path. This means that the database is 
+# searched by R when evaluating a variable, so objects in the database can be accessed 
+# by simply giving their names.
 
 ?detach()
 
-# Quoting below from inbuilt HELP - 
-# Detach a database, i.e., remove it from the search() path of available R objects. Usually this is either a data.frame which has been attached or a package which was attached by library.
+# # Quoting below from inbuilt HELP - 
+# # Detach a database, i.e., remove it from the search() path of available R objects. 
+# Usually this is either a data.frame which has been attached or a package which was attached by library.
 
+# Another Function which will help automate is - zap()
 
+# library(epicalc)
+# ?zap()
+# https://artax.karlin.mff.cuni.cz/r-help/library/epicalc/html/zap.html
 ```
 
 
@@ -577,6 +584,7 @@ The ATTACH will pull in a Data Set from the DataSet Package into our R Search Pa
 ```{r}
 # Code Section -22
 
+search()
 
 ```
 
