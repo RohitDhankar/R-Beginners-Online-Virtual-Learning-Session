@@ -180,7 +180,8 @@ boxplot(percent_1,col = "red",horizontal = TRUE,
 # have been bumped to the next row - keeping in mind 
 # the Horizontal space of our PDF knit of the .Rmd file 
 
-# Seen above we have the MEDIAN quartile - 50% and the UPPER Quartile - 75% along with THREE more percentiles. 
+# Seen above we have the MEDIAN quartile - 50% and the UPPER 
+# Quartile - 75% along with THREE more percentiles. 
 ```
 
 Wiki reference -- Percentile Rank -  "https://en.wikipedia.org/wiki/Percentile_rank" 
@@ -310,7 +311,9 @@ t(m2)
 a_seq <- 66:69 
 a_seq 
 
-# In the earlier section we create a MATRIX by using a sequence within the COMBINE function
+# In the earlier section we create a MATRIX by using a sequence within 
+# the COMBINE function
+
 # We can also use the - seq - sequence function as seen below 
 
 b_seq <- seq(from=66, to=69, by=1)
@@ -404,6 +407,7 @@ df_3_R
 
 ```
 
+
 # describeBy() with Grouping variables 
 
 ```{r}
@@ -440,7 +444,8 @@ library(help = "datasets")
 
 
 # 
-# Seen below are the DataSets available within my installed version of R - yours may slightly differ :- 
+# Seen below are the DataSets available within my installed version of R - 
+# yours may slightly differ :- 
 # 
 # AirPassengers           Monthly Airline Passenger Numbers 1949-1960
 # BJsales                 Sales Data with Leading Indicator
@@ -551,7 +556,9 @@ library(help = "datasets")
 
 To OPERATE upon an inbuilt DATASET we need to LOAD it into R . 
 
-In lay-man terms , we may equate this to our earlier - read.csv() , but there are subtle differences. 
+In lay-man terms , we may equate this to our earlier - read.csv() , but 
+
+there are subtle differences. 
 
 The ATTACH will pull in a Data Set from the DataSet Package into our R Search Path. 
 
@@ -570,7 +577,8 @@ The ATTACH will pull in a Data Set from the DataSet Package into our R Search Pa
 
 # # Quoting below from inbuilt HELP - 
 # # Detach a database, i.e., remove it from the search() path of available R objects. 
-# Usually this is either a data.frame which has been attached or a package which was attached by library.
+# Usually this is either a data.frame which has been attached or a 
+# package which was attached by library.
 
 # Another Function which will help automate is - zap()
 
@@ -588,19 +596,37 @@ search()
 
 ```
 
+# DATA_FRAME COLUMNS - The DF Column Vector
 
 
 ```{r}
 # Code Section -23
 
+# Three basic methods to access a DF COLUMN - also called the 
+# DF Column Vector
+
+print(df_1[[2]]) # Will Print 2nd COLUMN of the DF 
+#
+print(df_1[["Product.Name"]]) # Will Print the "NAMED"  COLUMN of the DF 
+#
+print(df_1$Product.Name) # Will Print the "NAMED" COLUMN of the DF 
+
 
 ```
 
-
+# DATA_FRAME - Row and Column Slices
 
 ```{r}
 # Code Section -24
 
+# Slicing the DF COLUMNS and ROWS 
+
+print(df_1[2]) # Will Print 2nd COLUMN - ALL ROWS - of the DF as a SLICE. 
+#
+print(df_1[2,]) # Will Print 2nd ROW - ALL COLUMNS - of the DF as a SLICE. 
+#
+print(df_1[c(2,4,6)]) # Using an INDEX VECTOR  - created with COMBINE Function. 
+# To access MULTIPLE COLUMNS - 2,4 and 6 of the DF.
 
 ```
 
@@ -614,6 +640,13 @@ search()
 
 ```
 
+# Plots and Graphs - the Basics 
+
+Over the next couple of sections we shall preview the basics of Plots and Graphs. 
+
+If we were to execute the code from the following sections , in the Console- the
+Graphs would not appear inline but would appear within the PLOTS pane 
+of R Studio or in certain cases as  POP Up's . 
 
 
 ```{r}
