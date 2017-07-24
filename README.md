@@ -75,16 +75,33 @@ Kindly note we shall us the FREE Versions Only of both R and RStudio for all our
 The R Language Prompt is : ">"
 #
 We get the same prompt as default in R Studio , within the R Studio Console. 
-#
+
+```
+
+
 We are mostly going to use the - ["R Notebook"](http://rmarkdown.rstudio.com/r_notebooks.html) provided within the R Studio  GUI. 
+
 We render the - R Notebook.Rmd , files into a PDF file , with the "KNIT" command- for easy portability and publishing the code.  
+
 Thus we may not see the ">" prompt preceding our chunks of code within the PDF files. 
+
 I will still use the ">" prompt wihtin this ReadMe.md file or other instructional files to represent the begining of a COde Chunk or line .  
+
+```
 #
 # Check Data Sets in Env .
 > objects()
 #
 ```
+As seen below - when we use the GUI within R Studio or the Console to install 
+
+a R Package from a CRAN Mirror - we will be able to see a Console 
+
+output as below - your may differ in certain aspects due to different
+
+directory structure and OS . 
+
+
 ```
 > install.packages(c("psych","ggplot2")) # installing multiple packages
 # Sample Console Output for the - psych - package
