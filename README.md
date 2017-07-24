@@ -17,7 +17,7 @@ Do note basis feedback from students - the content and flow of the sessions keep
 #
 [R STUDIO - SCREEN SHOTS](../master/Screen_Shots_1.md) 
 #
-R Code for this Module - [R_Code.pdf](../master/R_Code.pdf) ... 
+R Code for this Module - [R_Code.pdf](../master/R_Code.pdf) , and [R_Code_2.pdf](../master/R_Code_2.pdf) ... 
 #
 
 1. Intro to R the [R Project for Statistical Analysis](https://www.r-project.org/), Intro to [R Studio](https://www.rstudio.com/) , Intro to CRAN - any other introductory exchanges. 
@@ -67,14 +67,10 @@ Kindly note we shall us the FREE Versions Only of both R and RStudio for all our
 The R Language Prompt is :- 
 ```
  ">"
-#
-
 
 ```
 #
-This is the default in R Studio / R Studio Console.
-
-We mostly use the - ["R Notebook"](http://rmarkdown.rstudio.com/r_notebooks.html) provided within R Studio. 
+This is the default in R Studio / R Studio Console. We mostly use the - ["R Notebook"](http://rmarkdown.rstudio.com/r_notebooks.html) provided within R Studio. 
 
 Render - R Notebook.Rmd , files into a PDF file , with the "KNIT" command- for easy portability and publishing - code and charts.  
 
@@ -86,14 +82,7 @@ We cant see the ">" prompt preceding our chunks in PDF files. We still use ">" p
 > objects()
 #
 ```
-As seen below - when we use the GUI within R Studio or the Console to install 
-
-a R Package from a CRAN Mirror - we will be able to see a Console 
-
-output as below - your may differ in certain aspects due to different
-
-directory structure and OS . 
-
+As seen below - when we use the GUI within R Studio or the Console to install a R Package from a CRAN Mirror - we will be able to see a Console output as below - yours may differ in certain aspects due to different directory structure and Operating System etc. 
 
 ```
 > install.packages(c("psych","ggplot2")) # installing multiple packages
@@ -121,8 +110,7 @@ gfortran   -fpic  -g -O2 -fstack-protector-strong  -c sadmvnt.f -o sadmvnt.o
 gcc -std=gnu99 -shared -L/usr/lib/R/lib -Wl,-Bsymbolic-functions -Wl,-z,relro -o mnormt.so biv-nt.o sadmvnt.o -lgfortran -lm -lquadmath -L/usr/lib/R/lib -lR
 installing to /home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/mnormt/libs
 ```
-
-The Command to Quit R Studio and save your environment variables and project history. 
+Command to Quit R Studio and save your environment variables and project history. 
 #
 
 ```
@@ -153,7 +141,7 @@ Questions and Answers
 ### Module -2 :- 
 [ Duration : @60 Minutes ] 
 #
-R Code for this Module - [R_Code.pdf](../master/R_Code.pdf) ... and... [R_Code_1.pdf](../master/R_Code_1.pdf) ... 
+R Code for this Module - [R_Code.pdf](../master/R_Code.pdf) ... and... [R_Code_2.pdf](../master/R_Code_2.pdf) ... 
 #
 1. Using the Built in HELP Commands , learning to use Vignettes and CRAN for HELP. Accessing internal Data Sources - mtcars , iris etc . 
 #
@@ -180,11 +168,9 @@ Questions and Answers
 ### Module -3 :- 
 [ Duration : @60 Minutes ] 
 #
-R Code for this Module - [R_Code_1.pdf](../master/R_Code_1.pdf) ... 
+R Code for this Module - [R_Code_2.pdf](../master/R_Code_2.pdf) ... 
 #
 1. Intro to Data Vizualization with R. 
-
-   Learning - Scope and introductory fun ... "create your own SUPER VISUAL" !!!
 #
 2. Scatter Plots , Correlation Matrices , the plot() function . 
 #
@@ -210,7 +196,7 @@ Questions and Answers
 ### Module -4 :- 
 [ Duration : @60 Minutes ] 
 #
-R Code for this Module - [R_Code_1.pdf](../master/R_Code_1.pdf) ... 
+R Code for this Module - [R_Code_2.pdf](../master/R_Code_2.pdf) ... 
 #
 1. Plots and Graphs - the par() function. 
 #
@@ -226,7 +212,7 @@ R Code for this Module - [R_Code_1.pdf](../master/R_Code_1.pdf) ...
 ### Module -5 :- 
 [ Duration : @60 Minutes ] 
 #
-R Code for this Module - [R_Code_1.pdf](../master/R_Code_1.pdf) ... 
+R Code for this Module - [R_Code_2.pdf](../master/R_Code_2.pdf) ... 
 #
 
 
@@ -234,7 +220,7 @@ R Code for this Module - [R_Code_1.pdf](../master/R_Code_1.pdf) ...
 ### Module -6 :- 
 [ Duration : @60 Minutes ] 
 #
-R Code for this Module - [R_Code_1.pdf](../master/R_Code_1.pdf) ... 
+R Code for this Module - [R_Code_2.pdf](../master/R_Code_2.pdf) ... 
 #
 
 #
@@ -265,4 +251,6 @@ Source - "https://git-scm.com/docs/git-credential-store"
 
 4. The - Algebraic definition- of the Dot Product as defined by WikiPedia --- "https://en.wikipedia.org/wiki/Dot_product"
 
+5. Wiki reference -- Percentile Rank -  "https://en.wikipedia.org/wiki/Percentile_rank" 
 
+6. 
