@@ -249,8 +249,10 @@ dhankar@dhankar-VPCEB44EN:~/Desktop/R_Own$ git config credential.helper store
 Source - "https://git-scm.com/docs/git-credential-store"
 
 
-4. The - Algebraic definition- of the Dot Product as defined by WikiPedia --- "https://en.wikipedia.org/wiki/Dot_product"
+4. Wiki reference -- Algebraic definition- of the Dot Product - "https://en.wikipedia.org/wiki/Dot_product"
 
 5. Wiki reference -- Percentile Rank -  "https://en.wikipedia.org/wiki/Percentile_rank" 
 
-6. 
+6. Wiki reference -- Transpose of a MATRIX -- https://en.wikipedia.org/wiki/Transpose
+
+7. 
