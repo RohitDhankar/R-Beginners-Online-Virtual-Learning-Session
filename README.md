@@ -14,6 +14,9 @@ Do note basis feedback from students - the content and flow of the sessions keep
 
 ### Module -1 :- 
 [ Duration : @60 Minutes ] 
+#
+[R STUDIO - SCREEN SHOTS](../master/Screen_Shots_1.md) 
+#
 R Code for this Module - [R_Code.pdf](../master/R_Code.pdf) ... 
 #
 
@@ -60,68 +63,6 @@ Kindly note we shall us the FREE Versions Only of both R and RStudio for all our
    #
    
 
-SCREEN_SHOT_1: 
-![alt text](../master/Images_R_ScreenShots/1_1.png "SCREEN_SHOT_1")
-#
-
-SCREEN_SHOT_2: 
-![alt text](../master/Images_R_ScreenShots/1_2.png "SCREEN_SHOT_2")
-#  
-
-SCREEN_SHOT_3: 
-![alt text](../master/Images_R_ScreenShots/1_3.png "SCREEN_SHOT_3")
-#  
-
-SCREEN_SHOT_4: 
-![alt text](../master/Images_R_ScreenShots/1_4.png "SCREEN_SHOT_4")
-#  
-
-SCREEN_SHOT_5: 
-![alt text](../master/Images_R_ScreenShots/1_5.png "SCREEN_SHOT_5")
-#  
-
-SCREEN_SHOT_6: 
-![alt text](../master/Images_R_ScreenShots/1_6.png "SCREEN_SHOT_6")
-#  
-
-SCREEN_SHOT_7: 
-![alt text](../master/Images_R_ScreenShots/1_7.png "SCREEN_SHOT_7")
-#  
-
-SCREEN_SHOT_8: 
-![alt text](../master/Images_R_ScreenShots/1_8.png "SCREEN_SHOT_8")
-#  
-
-SCREEN_SHOT_9: 
-![alt text](../master/Images_R_ScreenShots/1_9.png "SCREEN_SHOT_9")
-#  
-
-SCREEN_SHOT_10: 
-![alt text](../master/Images_R_ScreenShots/1_10.png "SCREEN_SHOT_10")
-#  
-
-SCREEN_SHOT_11: 
-![alt text](../master/Images_R_ScreenShots/1_11.png "SCREEN_SHOT_11")
-#  
-
-SCREEN_SHOT_12: 
-![alt text](../master/Images_R_ScreenShots/1_12.png "SCREEN_SHOT_12")
-#  
-
-
-SCREEN_SHOT_13: 
-![alt text](../master/Images_R_ScreenShots/1_13.png "SCREEN_SHOT_13")
-#  
-
-
-SCREEN_SHOT_14: 
-![alt text](../master/Images_R_ScreenShots/1_14.png "SCREEN_SHOT_14")
-#  
-
-
-SCREEN_SHOT_15: 
-![alt text](../master/Images_R_ScreenShots/1_15.png "SCREEN_SHOT_15")
-#  
 
 
 3. Intro to CSV files . 
