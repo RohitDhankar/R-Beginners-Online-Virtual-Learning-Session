@@ -360,7 +360,42 @@ ma4
 ROW Bind Two Data Frames - 
 
 ```{r}
+df_1 <- read.csv("~/Desktop/R_Own/R_1 - Sheet1.csv",header =TRUE , sep = "," )
+df_1
 
+
+```
+
+
+```{r}
+#
+df_2 <- read.csv("~/Desktop/R_Own/R_2.csv",header =TRUE , sep = "," )
+df_2
+
+
+```
+
+
+```{r}
+# COLUMN BIND - Data Frame
+
+df_3_C <- cbind(df_1,df_2)
+df_3_C
+
+```
+
+
+
+```{r}
+# ROW BIND - Data Frame 
+
+df_3_R <- rbind(df_2,df_1)
+df_3_R
+
+```
+
+
+```{r}
 
 
 ```
@@ -368,11 +403,54 @@ ROW Bind Two Data Frames -
 
 ```{r}
 
+
 ```
+
 
 
 ```{r}
 
+
 ```
+
+
+
+```{r}
+
+
+```
+
+
+
+
+```{r}
+
+
+```
+
+
+
+
+```{r}
+
+
+```
+
+
+
+
+```{r}
+
+
+```
+
+
+
+
+```{r}
+
+
+```
+
 
 
