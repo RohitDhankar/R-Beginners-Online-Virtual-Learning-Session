@@ -72,7 +72,19 @@ Kindly note we shall us the FREE Versions Only of both R and RStudio for all our
 
 4. Basic Data Wrangling Functions :- 
 ```
-install.packages(c("psych","ggplot2")) # installing multiple packages
+The R Language Prompt is : ">"
+#
+We get the same prompt as default in R Studio , within the R Studio Console. 
+#
+We are mostly going to use the - ["R Notebook"](http://rmarkdown.rstudio.com/r_notebooks.html) provided within the R Studio  GUI. 
+We render the - R Notebook.Rmd , files into a PDF file , with the "KNIT" command- for easy portability and publishing the code.  
+Thus we may not see the ">" prompt preceding our chunks of code within the PDF files. 
+I will still use the ">" prompt wihtin this ReadMe.md file or other instructional files to represent the begining of a COde Chunk or line .  
+#
+# Check Data Sets in Env .
+> objects()
+#
+> install.packages(c("psych","ggplot2")) # installing multiple packages
 # Also can use the R Studio GUI to Install Packages and also LOAD already installed packages
 #
 library("psych", lib.loc="~/R/win-library/3.1")
