@@ -84,8 +84,37 @@ I will still use the ">" prompt wihtin this ReadMe.md file or other instructiona
 # Check Data Sets in Env .
 > objects()
 #
+```
+```
 > install.packages(c("psych","ggplot2")) # installing multiple packages
-# Also can use the R Studio GUI to Install Packages and also LOAD already installed packages
+# Sample Console Output for the - psych - package
+> install.packages("psych")
+Installing package into ‘/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3’
+(as ‘lib’ is unspecified)
+also installing the dependency ‘mnormt’
+
+trying URL 'https://cran.rstudio.com/src/contrib/mnormt_1.5-5.tar.gz'
+Content type 'application/x-gzip' length 37169 bytes (36 KB)
+==================================================
+downloaded 36 KB
+
+trying URL 'https://cran.rstudio.com/src/contrib/psych_1.7.5.tar.gz'
+Content type 'application/x-gzip' length 3219737 bytes (3.1 MB)
+==================================================
+downloaded 3.1 MB
+
+* installing *source* package ‘mnormt’ ...
+** package ‘mnormt’ successfully unpacked and MD5 sums checked
+** libs
+gfortran   -fpic  -g -O2 -fstack-protector-strong  -c biv-nt.f -o biv-nt.o
+gfortran   -fpic  -g -O2 -fstack-protector-strong  -c sadmvnt.f -o sadmvnt.o
+gcc -std=gnu99 -shared -L/usr/lib/R/lib -Wl,-Bsymbolic-functions -Wl,-z,relro -o mnormt.so biv-nt.o sadmvnt.o -lgfortran -lm -lquadmath -L/usr/lib/R/lib -lR
+installing to /home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/mnormt/libs
+#
+#
+> q() # Quit R Studio 
+#
+# We use R Studio GUI to not only Install Packages also LOAD already installed packages
 #
 library("psych", lib.loc="~/R/win-library/3.1")
 #
@@ -95,19 +124,19 @@ attach(..data..set..name..) # mostly for inbuilt data_sets
 #
 View(..data..set..name..) 
 #
-# Assign to a VARIABLE 
+# Assign Values to a VARIABLE 
 #
 data1 <- read.table("C:/STAT/data1.csv", dec=",", quote="\"") ## Where data1 == (..data..set..name..)
 data2 <- read.csv("C:/STAT/data2.csv")
 #
-describeBy()
-#
-describe()
+summary() # Basic Summary of Data 
 #
 ## in Decsribe - the Trimmed means - the top and bottom 10% ## are ignored - thus the Trimmed Mean is smaller than the Mean 
 ## - describeBy(...data...) - Shows the Trimmed Mean which is smaller in value from the Mean ...
-# 
-summary()
+
+describe()
+#
+describeBy()
 #
 # HouseKeeping tasks ---
 savehistory()
