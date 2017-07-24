@@ -357,7 +357,7 @@ ma4
 
 ```
 
-ROW Bind Two Data Frames - 
+# ROW BIND - Data Frames
 
 ```{r}
 df_1 <- read.csv("~/Desktop/R_Own/R_1 - Sheet1.csv",header =TRUE , sep = "," )
@@ -374,29 +374,39 @@ df_2
 
 
 ```
-
+# COLUMN BIND- Data Frame
 
 ```{r}
-# COLUMN BIND - Data Frame
+
 
 df_3_C <- cbind(df_1,df_2)
 df_3_C
 
 ```
 
-
+# ROW BIND - Data Frame 
 
 ```{r}
-# ROW BIND - Data Frame 
+
 
 df_3_R <- rbind(df_2,df_1)
 df_3_R
 
 ```
 
+# describeBy() with Grouping variables 
 
 ```{r}
-objects()
+library("psych", lib.loc="~/R/x86_64-pc-linux-gnu-library/3.3")
+library(psych)
+
+#?describeBy() # Seek HELP for the function - Uncomment this line. 
+
+describeBy(df_3_C,df_3_C$Date.of.Invoice) 
+
+# Grouping Variable is the - Date of Invoice . 
+# This Grouping variable has two Values here - 01-01-2013 and 02-01-2013
+# 
 
 ```
 
