@@ -55,15 +55,7 @@ Kindly note we shall us the FREE Versions Only of both R and RStudio for all our
    ORDINAL == ??
    
    INTERVAL VAR == ??
-   
-   
-   
-   How to create an Array a Matrix a DataFrame and Lists . 
-   Conducting our very First Basic Input Output and other computations.
    #
-   
-
-
 
 3. Intro to CSV files . 
    Entering Data from a CSV file . 
@@ -71,21 +63,22 @@ Kindly note we shall us the FREE Versions Only of both R and RStudio for all our
    R Code for this Module - [R_Code.pdf](../master/R_Code.pdf) ... 
 
 4. Basic Data Wrangling Functions :- 
+
+The R Language Prompt is :- 
 ```
-The R Language Prompt is : ">"
+ ">"
 #
-We get the same prompt as default in R Studio , within the R Studio Console. 
+
 
 ```
+#
+This is the default in R Studio / R Studio Console.
 
+We mostly use the - ["R Notebook"](http://rmarkdown.rstudio.com/r_notebooks.html) provided within R Studio. 
 
-We are mostly going to use the - ["R Notebook"](http://rmarkdown.rstudio.com/r_notebooks.html) provided within the R Studio  GUI. 
+Render - R Notebook.Rmd , files into a PDF file , with the "KNIT" command- for easy portability and publishing - code and charts.  
 
-We render the - R Notebook.Rmd , files into a PDF file , with the "KNIT" command- for easy portability and publishing the code.  
-
-Thus we may not see the ">" prompt preceding our chunks of code within the PDF files. 
-
-I will still use the ">" prompt wihtin this ReadMe.md file or other instructional files to represent the begining of a COde Chunk or line .  
+We cant see the ">" prompt preceding our chunks in PDF files. We still use ">" prompt wihtin ReadMe.md file or other instructional files to represent begining of a Code chunk.  
 
 ```
 #
@@ -127,35 +120,22 @@ gfortran   -fpic  -g -O2 -fstack-protector-strong  -c biv-nt.f -o biv-nt.o
 gfortran   -fpic  -g -O2 -fstack-protector-strong  -c sadmvnt.f -o sadmvnt.o
 gcc -std=gnu99 -shared -L/usr/lib/R/lib -Wl,-Bsymbolic-functions -Wl,-z,relro -o mnormt.so biv-nt.o sadmvnt.o -lgfortran -lm -lquadmath -L/usr/lib/R/lib -lR
 installing to /home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/mnormt/libs
+```
+
+The Command to Quit R Studio and save your environment variables and project history. 
 #
-#
+
+```
 > q() # Quit R Studio 
 #
 # We use R Studio GUI to not only Install Packages also LOAD already installed packages
 #
 library("psych", lib.loc="~/R/win-library/3.1")
 #
+# Misc ..HouseKeeping tasks ---
+#
 sink(Saved_Code_File_.txt)
 #
-attach(..data..set..name..) # mostly for inbuilt data_sets
-#
-View(..data..set..name..) 
-#
-# Assign Values to a VARIABLE 
-#
-data1 <- read.table("C:/STAT/data1.csv", dec=",", quote="\"") ## Where data1 == (..data..set..name..)
-data2 <- read.csv("C:/STAT/data2.csv")
-#
-summary() # Basic Summary of Data 
-#
-## in Decsribe - the Trimmed means - the top and bottom 10% ## are ignored - thus the Trimmed Mean is smaller than the Mean 
-## - describeBy(...data...) - Shows the Trimmed Mean which is smaller in value from the Mean ...
-
-describe()
-#
-describeBy()
-#
-# HouseKeeping tasks ---
 savehistory()
 #
 save.image("C:/.///.//..RData)
@@ -164,24 +144,8 @@ getwd()
 #
 setwd()
 #
-trunc(6.9999)
-#
-floor(8.9999)
-#
-round(4.9999,digits=0)
-#
-round(6.345674321,digits=3)
-#
-log(666,base=10)
-#
-log(444,base=2)
-#
+
 ```
-
-The very basic [Psych package - CRAN](http://personality-project.org/r/psych-manual.pdf)
-
-Saving our very First R Script and Environment variables .
-
 #
 Questions and Answers 
 
