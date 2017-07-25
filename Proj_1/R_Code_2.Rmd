@@ -7,6 +7,9 @@ output:
 urlcolor: blue
 ---
 
+
+
+
 This R code book has been written by [Rohit Dhankar](https://github.com/RohitDhankar) . GitHub - https://github.com/RohitDhankar 
 
 
@@ -60,6 +63,25 @@ num_vector1 <- c(11,12,13,14,15)
 #
 num_vector3 <- c(num_vector,num_vector1)
 print(num_vector3)
+#
+sort(num_vector3)
+# 
+order(num_vector3) # Ascending Order of  ELEMENTS without SORTING .
+#
+# The COLON Operator is same as the seq() function seen later in this text. 
+
+seq_1<- 55:50
+seq_1
+#
+seq_2<- 50:55
+seq_2
+#
+# While the above - seq_1 and seq_2 are stored as Objects withing persistence storage. 
+
+50:55 ## is in Memory Only and Not Stored on any persistence storage. 
+
+## Source -- R Manual -- https://stat.ethz.ch/R-manual/R-devel/library/base/html/Colon.html
+
 ```
 
 Some basic Maths and Stats with VECTORS.  
@@ -68,9 +90,58 @@ Some basic Maths and Stats with VECTORS.
 ```{r}
 # Code Section -3
 num_vector3 + 5
-
 # Adds NUMERIC VALUE = 5 to all ELEMENTS of the Num Vector. 
+nmv_1<-c(20,21,211,312,413,5114)
+nmv_2<-c(20,21,211,313,414,5214)
+#
+class(nmv_1) # "numeric" Vector 
+#
+print(1/nmv_1)
+#
+min_max_nmv <- c(min(nmv_1),max(nmv_1))
+min_max_nmv  ## Output - MIN == 20 , MAX ==5114
+#
 
+### MATHEMATICAL logical operators and Boolean calculus - present in R . 
+# - <, <=, >, >=, == for exact equality and != for inequality. 
+
+### Boolean calculus
+# Given - nmv_1 and nmv_2 are logical expressions, 
+# thus nmv_1 & nmv_2 is intersection ("AND")
+# nmv_1 | nmv_2 is union ("OR")
+# !nmv_1 is Negation of nmv_1.
+
+nmv_1 == nmv_2
+
+#
+
+nmv_1 != nmv_2
+
+# 
+# Lets introduce NA's - the data wranglers nightmare
+#
+nmv_3 <- c(11,NA,22,33,44,NA,NA)
+nmv_3
+# We can use function is.na() , to find out the NOT AVAILABLE missing values 
+# At a letr stage we shall also look at NA management or IMPUTATION of MISSING VALUES 
+# Here is a prelim resource -- 
+#
+is.na(nmv_3)
+#
+# Kaggle_Titanic [Multiple Imputation of Missing_Values] -- 
+# http://datasciencewithrandpython.blogspot.in/2017/01/kaggle-titanic-initial-analysis-wip.html
+#
+# Not a NUMBER = NaN
+xx <- 0/0.00
+xx
+#
+is.nan(xx) ## TRUE
+#
+is.nan(nmv_3) ## As Many FALSE - as Elements 
+#
+nmv_4 <- nmv_3 + 2 ## Any OPERATION done with a NA value , results in a NA value. 
+nmv_4
+#
 ```
 
 
@@ -673,6 +744,7 @@ hist(df_1$Sales.Price,col.main="blue",col = "orange")
 
 ```{r}
 # Code Section -27
+
 
 
 ```
