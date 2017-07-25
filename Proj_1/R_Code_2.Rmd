@@ -631,13 +631,14 @@ print(df_1[c(2,4,6)]) # Using an INDEX VECTOR  - created with COMBINE Function.
 
 ```
 
-
-
+Lets create a New Directory - Files Folder from within R and house our 
+basic introductory graphs there - we use - dir.create()
 
 
 ```{r}
 # Code Section -25
 
+#dir.create("/home/dhankar/Desktop/R_Own/Plots/Intro_1/", recursive=TRUE) # to be RUN only Once
 
 ```
 
@@ -650,9 +651,21 @@ Graphs would not appear inline but would appear within the PLOTS pane
 of R Studio or in certain cases as  POP Up's . 
 
 
+# HISTOGRAM an Introduction 
+
+
 ```{r}
 # Code Section -26
+# So what exactly is a HISTOGRAM - 
+# " estimate of the probability distribution of a continuous variable (quantitative variable)"
+# Source -- Wiki -- https://en.wikipedia.org/wiki/Histogram
 
+
+hist(df_1$Cost.Price,col.main="blue",col = "green")
+#hist(df_1$Cost.Price,df_1$Sales.Price)
+#
+
+hist(df_1$Sales.Price,col.main="blue",col = "orange")
 
 ```
 

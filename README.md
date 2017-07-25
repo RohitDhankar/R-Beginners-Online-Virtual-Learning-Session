@@ -6,6 +6,12 @@ The Git Repo for content and code for the - Data Science India - R Begginers Onl
 Students / Corporate Learners who have been through earlier online sessions with me , may also benefit from this updated repository . As usual in case of any challenges reach out to me for further discussions . 
 
 Do note basis feedback from students - the content and flow of the sessions keeps changing . 
+
+Two of my Older Blogs are as below - they also have R and Python code for Beginners
+#
+[R for Beginners OLD Blog](http://r-for-beginners.strategic-leadership-llc-india.com/-rstats---marketing-mix-modeling)
+
+[R and Python another slightly dated Blog](http://datasciencewithrandpython.blogspot.in/)
 #
 
 
