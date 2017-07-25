@@ -1,18 +1,19 @@
 ---
-title: "R Notebook"
+title: "R for Beginners - R Code File -2"
 output:
   pdf_document: default
   html_notebook: default
+  html_document: default
+urlcolor: blue
 ---
 
-This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+This R code book has been written by [Rohit Dhankar](https://github.com/RohitDhankar) . GitHub - https://github.com/RohitDhankar 
 
-Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
 
 This is the 2nd in series of R Code Files.     
 
 
-Refer the GitHub Repository , for all Code files ---> https://github.com/RohitDhankar/R-Beginners-Online-Virtual-Learning-Session    
+Refer GitHub Repository , for all Data Files --> https://github.com/RohitDhankar/R-Beginners-Online-Virtual-Learning-Session    
 
 
 Its a good practice from time to time to keep a track of our current Working Directory and list out all the Objects in our R ENVIRONMENT - specially so when we are committing changes to a Git Remote.   
@@ -42,7 +43,7 @@ char_vector <- c("x","d","c","f")
 print(a1)
 #
 print(char_vector)
-#
+
 
 ```
 

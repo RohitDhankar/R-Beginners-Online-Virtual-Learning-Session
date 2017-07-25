@@ -17,7 +17,7 @@ Do note basis feedback from students - the content and flow of the sessions keep
 #
 [R STUDIO - SCREEN SHOTS](../master/Screen_Shots_1.md) 
 #
-R Code for this Module - [R_Code.pdf](../master/R_Code.pdf) , and [R_Code_2.pdf](../master/R_Code_2.pdf) ... 
+R Code for this Module -[R_Pubs](http://rpubs.com/rohitdhankaranalytics/293954) , [R_Code.pdf](../master/R_Code.pdf) , and [R_Code_2.pdf](../master/R_Code_2.pdf) ... 
 #
 
 1. Intro to R the [R Project for Statistical Analysis](https://www.r-project.org/), Intro to [R Studio](https://www.rstudio.com/) , Intro to CRAN - any other introductory exchanges. 
@@ -141,7 +141,7 @@ Questions and Answers
 ### Module -2 :- 
 [ Duration : @60 Minutes ] 
 #
-R Code for this Module - [R_Code.pdf](../master/R_Code.pdf) ... and... [R_Code_2.pdf](../master/R_Code_2.pdf) ... 
+R Code for this Module -[R_Pubs](http://rpubs.com/rohitdhankaranalytics/293954) , [R_Code.pdf](../master/R_Code.pdf) ... and... [R_Code_2.pdf](../master/R_Code_2.pdf) ... 
 #
 1. Using the Built in HELP Commands , learning to use Vignettes and CRAN for HELP. Accessing internal Data Sources - mtcars , iris etc . 
 #
@@ -168,7 +168,7 @@ Questions and Answers
 ### Module -3 :- 
 [ Duration : @60 Minutes ] 
 #
-R Code for this Module - [R_Code_2.pdf](../master/R_Code_2.pdf) ... 
+R Code for this Module -[R_Pubs](http://rpubs.com/rohitdhankaranalytics/293954) , [R_Code_2.pdf](../master/R_Code_2.pdf) ... 
 #
 1. Intro to Data Vizualization with R. 
 #
@@ -196,7 +196,7 @@ Questions and Answers
 ### Module -4 :- 
 [ Duration : @60 Minutes ] 
 #
-R Code for this Module - [R_Code_2.pdf](../master/R_Code_2.pdf) ... 
+R Code for this Module -[R_Pubs](http://rpubs.com/rohitdhankaranalytics/293954) , [R_Code_2.pdf](../master/R_Code_2.pdf) ... 
 #
 1. Plots and Graphs - the par() function. 
 #
@@ -212,7 +212,7 @@ R Code for this Module - [R_Code_2.pdf](../master/R_Code_2.pdf) ...
 ### Module -5 :- 
 [ Duration : @60 Minutes ] 
 #
-R Code for this Module - [R_Code_2.pdf](../master/R_Code_2.pdf) ... 
+R Code for this Module -[R_Pubs](http://rpubs.com/rohitdhankaranalytics/293954) , [R_Code_2.pdf](../master/R_Code_2.pdf) ... 
 #
 
 
@@ -220,7 +220,7 @@ R Code for this Module - [R_Code_2.pdf](../master/R_Code_2.pdf) ...
 ### Module -6 :- 
 [ Duration : @60 Minutes ] 
 #
-R Code for this Module - [R_Code_2.pdf](../master/R_Code_2.pdf) ... 
+R Code for this Module -[R_Pubs](http://rpubs.com/rohitdhankaranalytics/293954) , [R_Code_2.pdf](../master/R_Code_2.pdf) ... 
 #
 
 #

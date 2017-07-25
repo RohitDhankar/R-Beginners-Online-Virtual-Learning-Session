@@ -14,58 +14,39 @@ Refer the GitHub Repository , for all Code files ---> https://github.com/RohitDh
 
 Its a good practice from time to time to keep a track of our current Working Directory and list out all the Objects in our R ENVIRONMENT - specially so when we are committing changes to a Git Remote.   
 
-# VECTOR Operations
+# Heading -1 
 
 ```{r}
 
-getwd()
-#
-ls()
 
 ```
 
-We could remove any object with command - rm("Object Name")  
 
 We can also use print() , to view any objects stored value.  
 
 
 ```{r}
 # Code Section -1 
-a1 <- "FINANCE"
-b1 <- "MARKETING"
-c1 <- "SALES"
-d1 <- 3.1416
-char_vector <- c("x","d","c","f")
-print(a1)
-#
-print(char_vector)
-#
+
+
 
 ```
 
-Going further with VECTORS .   
-
-We combine two or more vectors to get another vector .  
 
 
 ```{r}
 # Code Section -2
-num_vector <- c(22,22,33,33,44)
-print(num_vector)
-num_vector1 <- c(11,12,13,14,15)
-#
-num_vector3 <- c(num_vector,num_vector1)
-print(num_vector3)
+
+
 ```
 
-Some basic Maths and Stats with VECTORS.  
+# 
 
 
 ```{r}
 # Code Section -3
-num_vector3 + 5
 
-# Adds NUMERIC VALUE = 5 to all ELEMENTS of the Num Vector. 
+
 
 ```
 
@@ -74,20 +55,16 @@ num_vector3 + 5
 ```{r}
 # Code Section -4
 
-num_vector1 * num_vector3
-# First 5 elements of - num_vector3 multiplied by the Five Elements 
-# of num_vector1 and again the Next 5 elements of num_vector3 
-# multiplied by the Five Elements of num_vector1
 
 ```
 
-Check out the LENGTH of a VECTOR with length()   
+
 
 
 ```{r}
 # Code Section -5
 
-length(num_vector1 * num_vector3)
+
 ```
 
 
