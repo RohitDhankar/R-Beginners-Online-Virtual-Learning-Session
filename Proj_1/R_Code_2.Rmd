@@ -150,9 +150,37 @@ nmv_4
 # Code Section -4
 
 num_vector1 * num_vector3
+
 # First 5 elements of - num_vector3 multiplied by the Five Elements 
 # of num_vector1 and again the Next 5 elements of num_vector3 
 # multiplied by the Five Elements of num_vector1
+
+# Concatenate Strings - Its ofetn required to PASTE together CHAR VARIABLES 
+# to create more Complex CHAR VARIABLES 
+# R has a handy function called PASTE - 
+# ?paste() # Uncomment to see help 
+# Concatenate vectors after converting to character.
+
+col_names_1 <- paste(c("N","P","Q","R"), 1:20, sep="")
+col_names_1
+
+#
+col_names_2 <- paste(c("X","Y","Z"), 1:3, sep="")
+col_names_2
+
+#
+col_names_3 <- paste(c("M","N","P"), col_names_2, sep="")
+col_names_3
+#
+#
+col_names_4 <- paste( col_names_2,c("M","N","P"), sep="") 
+col_names_4
+
+
+# As seen above very handy for creating COLUMN NAMES or VARIABLE LABELS 
+# Kindly notice - PASTE() folllows the Order of R OBJECTS provided 
+# and converts them to CHAR VECTORS. 
+  
 
 ```
 
