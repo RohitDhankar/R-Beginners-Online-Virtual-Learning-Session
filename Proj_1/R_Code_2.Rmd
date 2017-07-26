@@ -836,19 +836,54 @@ hist(df_1$Sales.Price,col.main="black",col = "red")
 
 ```
 
-
+# LAYOUT of Plots - beyond the par()
 
 ```{r}
 # Code Section -28
+## The same set of PLOTS as earlier now formatted 
+# with Layout inplace of par()
 
+
+#?layout()
+
+layout(matrix(1, 2, byrow = TRUE),widths = c(4,1),heights = c(4,1))
+
+plot(df_1$Date.of.Invoice,df_1$Sales.Price,col=c("red","yellow"))
+#
+hist(df_1$Cost.Price,col.main="black",col = "yellow")
+#
+plot(df_1$Date.of.Invoice,df_1$Cost.Price,col=c("green","yellow"))
+#
+hist(df_1$Sales.Price,col.main="black",col = "red")
 
 ```
 
-
+# SCATTER Plot - initial Intro 
 
 
 ```{r}
 # Code Section -29
+
+df_a1 <- read.csv("~/Desktop/R_Own/Data_Directory/mcprod.csv")
+#
+summary(df_a1)
+#
+plot(df_a1$a5,df_a1$a6,col=c("red","blue"))
+#
+# Its a Synthetic Simulated Dataset for learning purposes ...
+# As seen below - Variables a1,a3,a5-a7 == Double / Decimal 
+# (Double Precision Numeric Values)
+# X1 == Var Char
+# All others are Integers 
+
+# QUOTING Verbatim - WIKI-Scatter Diagram -- https://en.wikipedia.org/wiki/Scatter_plot
+#
+# If no dependent variable exists, either type of variable can be plotted 
+# on either axis and a scatter plot will illustrate only the 
+# degree of correlation (not causation) between two variables.
+# 
+# VERY VERY VERY Important - NOT CAUSATION ... so how do we 
+# ascertain CAUSATION , we shall see within this text soon. 
 
 
 ```

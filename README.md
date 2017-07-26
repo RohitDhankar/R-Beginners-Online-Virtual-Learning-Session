@@ -261,4 +261,14 @@ Source - "https://git-scm.com/docs/git-credential-store"
 
 6. Wiki reference -- Transpose of a MATRIX -- https://en.wikipedia.org/wiki/Transpose
 
-7. 
+7. Wiki reference -- Scatter plot. (2017, July 2). In Wikipedia, The Free Encyclopedia. Retrieved
+11:30, July 26, 2017
+, from https://en.wikipedia.org/w/index.php?title=Scatter_plot&oldid=788581167
+
+8. 
+
+9. 
+
+10.
+
+
