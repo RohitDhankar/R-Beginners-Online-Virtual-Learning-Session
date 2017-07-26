@@ -191,6 +191,8 @@ Check out the LENGTH of a VECTOR with length()
 # Code Section -5
 
 length(num_vector1 * num_vector3)
+
+
 ```
 
 
@@ -355,9 +357,10 @@ boxplot(percent_1,percent_2,percent_3,percent_4,percent_5,percent_6,percent_7,co
 ```{r}
 # Code Section -11
 
-# Just for Fun a PIE Graph --- you always 
-# need to avoid PIE Graphs 
-
+# Just for Fun a PIE Graph --- you always ...
+# need to avoid PIE Graphs for "DESCRIPTIVE STATS"
+# I personally love to use them for MARKETING
+# They are usually excellent EYE CANDY :P
 
 pie(rep(1, 7), col = rainbow(7))
 
@@ -504,6 +507,29 @@ df_3_C
 
 df_3_R <- rbind(df_2,df_1)
 df_3_R
+
+# We can SUBSET Data within R Data Structures with custom and inbuilt functions
+#
+
+summary(df_3_R$Cost.Price)
+#
+sub_df_1 <- subset(df_3_R,Cost.Price > 300)
+#
+summary(sub_df_1$Cost.Price) # As seen from the SUMMARY 
+# All ROWS or OBSERVATIONS with Cost.Price Values LESS THAN - 300 
+# have been dropped from the Sub-Set Data Frame. 
+
+# To SUBSET a Vector - we may simply-
+#
+summary(num_vector3)
+#
+sub_num_vector3 <- num_vector3[-(1:3)]
+# Creates a SUBSET of all ELEMENTS 
+# of num_vector3 - besides the FIRST THREE
+#
+summary(sub_num_vector3)
+
+
 
 ```
 
@@ -761,19 +787,52 @@ of R Studio or in certain cases as  POP Up's .
 
 
 hist(df_1$Cost.Price,col.main="blue",col = "green")
-#hist(df_1$Cost.Price,df_1$Sales.Price)
 #
-
 hist(df_1$Sales.Price,col.main="blue",col = "orange")
 
 ```
+
+# par() Function - Multiple adjacent plots
+
+par{graphics}
+
+Next sections we look at some basic usage of the par() function , with it we can create a 
+matrix of nrows X ncolumns - of various plots and graphs
 
 
 
 ```{r}
 # Code Section -27
+#?par() # Uncomment for Help 
 
+opar <- par(no.readonly=TRUE)
+par(mfrow=c(2,1)) # 2 - ROWS , 1 - COLUMN - Filled in by ROWS 
+# or we may use - mfcol=c() , to fill by COLUMNS
 
+hist(df_1$Cost.Price,col.main="blue",col = "green")
+#
+hist(df_1$Sales.Price,col.main="blue",col = "orange")
+
+# Next lets try - sub-plot in 2 COLUMNS and 1 ROW 
+
+opar <- par(no.readonly=TRUE)
+par(mfrow=c(1,2)) # 1 - ROW , 1 - COLUMNS 
+
+hist(df_1$Cost.Price,col.main="black",col = "yellow")
+#
+hist(df_1$Sales.Price,col.main="black",col = "red")
+
+#
+opar <- par(no.readonly=TRUE)
+par(mfrow=c(2,2)) # 2 - ROWS , 2 - COLUMNS 
+#
+plot(df_1$Date.of.Invoice,df_1$Sales.Price,col=c("red","yellow"))
+#
+hist(df_1$Cost.Price,col.main="black",col = "yellow")
+#
+plot(df_1$Date.of.Invoice,df_1$Cost.Price,col=c("green","yellow"))
+#
+hist(df_1$Sales.Price,col.main="black",col = "red")
 
 ```
 
