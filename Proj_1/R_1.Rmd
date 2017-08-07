@@ -15,16 +15,23 @@ Try executing this chunk by clicking the *Run* button within the chunk or by pla
 d1 <- 2+3
 d1
 
+
 array_1 <-array(1:24, dim=c(3,4,2))
 array_1
+
+array_1_1 <-array(1:50, dim=c(5,5,2))
+array_1_1
+
+
 ```
 Creating our very First Array 
 
 ```{r}
 ?array()
 
-array_1 <-array(1:24, dim=c(3,4,3))
+array_1 <-array(1:36, dim=c(3,4,3))
 array_1
+
 ```
 
 DIM == "Integer vector of length one or more giving the maximal indices in each dimension."
@@ -34,11 +41,16 @@ VALUES or OBSERVATIONS are filled in COLUMNS FIRST - ROWS NEXT
 
 
 ```{r}
+
 is.array(array_1)
+
+is.array(df_1)
+
 ```
 
 
 ```{r}
+
 array_2 <-array(1:24, dim=c(3,4))
 array_2
 
@@ -48,7 +60,7 @@ array_2
 
 ```{r}
 
-typeof(array_2)
+class(array_2)
 
 ```
 
@@ -69,7 +81,7 @@ Both ARRAYS Stored as INTEGERS in Memory
 
 ```
 
-WHAT ARE - VECTORS --- One Dimension Arrays which can hold - NUMERIC , CHARACTER or LOGICAL DATA  
+WHAT ARE - VECTORS --- One Dimension Arrays which can hold - NUMERIC , CHARACTER or LOGICAL DATA  ## Float in Vector ??
 #
 Vectors can be of THREE Types or MODES - which means the DATA TYPE they can hold.  
 #  
@@ -81,9 +93,16 @@ Lets see an example of each type below -
 ```{r}
 num_vector <- c(22,22,33,33,44)
 num_vector
+
+
+class(num_vector) ## numeric
+
 char_vector <- c("x","d","c","f")
 char_vector
-logical_vector <- c(TRUE,FALSE,TRUE,FALSE,FALSE,FALSE)
+
+class(char_vector) ## character
+
+logical_vector <- c(TRUE,FALSE,TRUE,FALSE,FALSE,FALSE) ## How utilized ??
 logical_vector  
 
 ```
@@ -95,10 +114,15 @@ a1 <- "FINANCE"
 b1 <- "MARKETING"
 c1 <- "SALES"
 d1 <- 3.1416
-a1
+
+
+class(a1)
+
 b1
 c1
 d1
+
+#a1[2] ## NA 
 
 ```
 
@@ -109,8 +133,15 @@ Take an example of the "num_vector" from above , we REFER the 1st ELEMENT - Elem
 
 ```{r}
 
+# num_vector <- c(22,22,33,33,44)
+
+num_vector <- c(22.22,33,33,44)
+class(num_vector)  ### Check - takes class of First Element ?? 
+
 nm_1 <- num_vector[1]
 nm_1
+
+
 
 ```
 Below we refer value stored in Elements - 2,3 and 5 , the values as seen below are - 22, 33 and 44   
@@ -150,7 +181,7 @@ matrix(data = NA, nrow = 1, ncol = 1, byrow = FALSE, dimnames = NULL)
 
 ```{r}
 
-m_1 <- matrix(data=66:99,nrow=2,ncol=2)
+m_1 <- matrix(data=66:69,nrow=2,ncol=2)
 m_1
 
 ```
@@ -159,7 +190,7 @@ Data set has been truncated as we didnt mention enough ROWS for the MATRIX , let
   
 ```{r}
 
-m_1 <- matrix(data=66:99,nrow=5,ncol=2)
+m_1 <- matrix(data=1:10,nrow=5,ncol=2)
 m_1
 
 
@@ -193,7 +224,11 @@ m_1
 
 
 ```
-We still derive a MATRIX - m_1 , but the plot as seen below is illegible.   
+We still derive a MATRIX - m_1 , but the plot as seen below is illegible. 
+
+OR
+
+Its extremely intelligent :)
 
 ```{r}
 
@@ -204,17 +239,21 @@ plot(m_1)
 
 #
 
-Weve seen the basic arguments for the Function "matrix()" above - now we look at "byrow" and "dimnames".    
-DimNames or Dimension Names can be a LIST of structure - LIST(ROW_NAMES,COLUMN_NAMES) .  
-If we have only the 1st ELEMENT of a LIST then that defaults to ROW_NAMES and if we have a 2nd ELEMENT it defaults to COLUMN_NAMES.   
-Seen below - row_names and col_names created using the COMBINE - c() , function.   
+Weve seen the basic arguments for the Function "matrix()" above - now we look at "byrow" and "dimnames".
+
+DimNames or Dimension Names can be a LIST of structure - LIST(ROW_NAMES,COLUMN_NAMES) .
+
+If we have only the 1st ELEMENT of a LIST then that defaults to ROW_NAMES and if we have a 2nd ELEMENT it defaults to COLUMN_NAMES.
+
+Seen below - row_names and col_names created using the COMBINE - c() , function.
+
 
 
 
 ```{r}
 row_names <- c("Row_Name_1","Row_Name_2") 
 col_names <- c("Col_Name_1","Col_Name_2")
-m_1 <- matrix(data=66:69,nrow=2,ncol=2,byrow=FALSE,dimnames=list(col_names,row_names))
+m_1 <- matrix(data=66:69,nrow=2,ncol=2,byrow=FALSE,dimnames=list(row_names,col_names))
 m_1
 
 ```
@@ -258,7 +297,7 @@ Weve seen examples of VECTORS and MATRICES in the above sections .
   
   We also at a later stage look at creating own DataFrames from Manual inputs within R     
   
-  ?read.csv() 
+  ?read.csv()   ## Later -- Look at read.table() in further detail.
   
   read.csv(file, header = TRUE, sep = ",", quote = "\"",
          dec = ".", fill = TRUE, comment.char = "", ...)
@@ -301,11 +340,12 @@ To refer to the elements of a DATAFRAME we have the following options :-
 
 
 ```{r}
-df_2[1,3]
+df_2[7,3]
 #
 df_2[3,1]
 #
 df_2[4,3]
+#
 # Date of Invoice
 #
 #df_2["Date of Invoice"]
@@ -336,6 +376,8 @@ Refer any COLUMN or VARIABLE of a DF using the DOLLAR Notation .
 
 df_4 <- df_3$Category
 df_4
+View(df_4)   ## Check -- Column Label for the 1 Column 
+
 
 ```
 

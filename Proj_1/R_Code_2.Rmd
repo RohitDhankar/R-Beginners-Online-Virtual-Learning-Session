@@ -7,9 +7,7 @@ output:
 urlcolor: blue
 ---
 
-
-
-
+https://www.youtube.com/watch?v=vF0M-1OJlWI
 This R code book has been written by [Rohit Dhankar](https://github.com/RohitDhankar) . GitHub - https://github.com/RohitDhankar 
 
 
@@ -89,13 +87,21 @@ Some basic Maths and Stats with VECTORS.
 
 ```{r}
 # Code Section -3
-num_vector3 + 5
+num_vector3 + 10
+
 # Adds NUMERIC VALUE = 5 to all ELEMENTS of the Num Vector. 
 nmv_1<-c(20,21,211,312,413,5114)
 nmv_2<-c(20,21,211,313,414,5214)
 #
 class(nmv_1) # "numeric" Vector 
 #
+nmv_vect <- (1/nmv_1)
+class(nmv_vect)
+
+typeof(nmv_vect)
+typeof(nmv_2) ## CHECK --- Why not Integer or ??
+
+
 print(1/nmv_1)
 #
 min_max_nmv <- c(min(nmv_1),max(nmv_1))
@@ -120,8 +126,10 @@ nmv_1 != nmv_2
 # 
 # Lets introduce NA's - the data wranglers nightmare
 #
+
 nmv_3 <- c(11,NA,22,33,44,NA,NA)
 nmv_3
+
 # We can use function is.na() , to find out the NOT AVAILABLE missing values 
 # At a letr stage we shall also look at NA management or IMPUTATION of MISSING VALUES 
 # Here is a prelim resource -- 
@@ -137,18 +145,37 @@ xx
 #
 is.nan(xx) ## TRUE
 #
-is.nan(nmv_3) ## As Many FALSE - as Elements 
+is.nan(nmv_3) ## As Many FALSE - as Elements ### NA's are NOT Treated as NaN's 
+
 #
 nmv_4 <- nmv_3 + 2 ## Any OPERATION done with a NA value , results in a NA value. 
 nmv_4
 #
+# Creating an INTEGER Numeric Vector 
+
+int_num_vec <- c(22L,33L,44L,55L,66L)
+class(int_num_vec) ## CLASS == "integer"
+typeof(int_num_vec)
+int_num_vec
+
+# Creating a DOUBLE Numeric Vector 
+
+db_num_vec <- c(22.1,33.2,44.3,55.6,66.7)
+class(db_num_vec) ## CLASS == "numeric"
+typeof(db_num_vec) ## DOUBLE 
+db_num_vec
+
+
 ```
 
 
 
 ```{r}
 # Code Section -4
-
+num_vector1
+#
+num_vector3
+#
 num_vector1 * num_vector3
 
 # First 5 elements of - num_vector3 multiplied by the Five Elements 
@@ -163,6 +190,10 @@ num_vector1 * num_vector3
 
 col_names_1 <- paste(c("N","P","Q","R"), 1:20, sep="")
 col_names_1
+
+
+col_name_2_1 <- paste(c("Q","Q","Q","Q"),1:4, sep="")
+col_name_2_1
 
 #
 col_names_2 <- paste(c("X","Y","Z"), 1:3, sep="")
@@ -210,8 +241,10 @@ nv1 <- c(6,7,8,9,10)
 
 nv %*% nv1 # Inner Product of same Length Vectors
 
+#  "two equal-length sequences of numbers (usually coordinate vectors) and returns a single number."
 # Algeberic Dot Product as defined by WikiPedia - "https://en.wikipedia.org/wiki/Dot_product"
 
+### CHECK --- A element wise product example to be included 
 
 ```
 
@@ -222,6 +255,7 @@ Operate upon a ELEMENT of the Vector.
 
 
 log(num_vector3[2]) # Log Base 2 of 22 
+
 #
 log(22)
 #
@@ -235,6 +269,7 @@ Converting a CHAR Vector into a NUMERIC Vector .
 ```{r}
 # Code Section -8
 ch_v <- c("11","12","13","14","15")
+typeof(ch_v)
 #
 class(ch_v)
 #ch_v + 2 # Error in ch_v + 2 : non-numeric argument to binary operator
@@ -245,15 +280,18 @@ nm_v <- as.numeric(ch_v)
 class(nm_v)
 nm_v + 2 
 #
+
 #Summary of the Num Vector as below :- 
 #
 summary(nm_v+2)
 #
 summary(nm_v+5)
 #
+nm_v
+
 sum(nm_v+5)
 #
-sd(nm_v+5)
+sd(nm_v+5) ## CHECK  -- Standard Deviation in much detail 
 #
 max(nm_v+5)
 #
@@ -273,8 +311,10 @@ quantile(nm_v+100)
 #We can also specify the Quantile buckets or Percentiles as an argument to the Quantile function :-
 #
 nmv_q <- c(10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,100)
+summary(nmv_q)
 percent_1 <- quantile(nmv_q, c(.50,.75,.84, .97, .99))
 percent_1 
+
 boxplot(percent_1,col = "red",horizontal = TRUE,
         main = "Box and Whisker Plot of Quantiles",
         xlab = "Quantile Values")
@@ -284,6 +324,14 @@ boxplot(percent_1,col = "red",horizontal = TRUE,
 
 # Seen above we have the MEDIAN quartile - 50% and the UPPER 
 # Quartile - 75% along with THREE more percentiles. 
+
+
+boxplot(nmv_q,col = "green",horizontal = TRUE,
+        main = "Box and Whisker Plot of Quantiles",
+        xlab = "Vector Values")
+
+
+
 ```
 
 Wiki reference -- Percentile Rank -  "https://en.wikipedia.org/wiki/Percentile_rank" 
@@ -428,10 +476,14 @@ b_seq <- seq(from=66, to=69, by=2)
 b_seq
 
 #
-
+b_seq <- seq(from=1, to=30, by=3)
+b_seq
+#
 c_seq <- seq(from=1, to=10, by=2)
 c_seq
+#
 class(c_seq)
+typeof(c_seq)
 
 ```
 
@@ -494,8 +546,13 @@ df_2
 
 # Code Section -17
 
-df_3_C <- cbind(df_1,df_2)
+summary(df_1)
+summary(df_2)
+df_3_C <- cbind(df_1,df_2) ## Column Bind is not the correct operation to be done here 
 df_3_C
+
+summary(df_3_C)
+## R does Not Complaint as such but this DF is rendered useless ...
 
 ```
 
@@ -512,6 +569,8 @@ df_3_R
 #
 
 summary(df_3_R$Cost.Price)
+#
+boxplot(df_3_R$Cost.Price,col="green",horizontal = TRUE)
 #
 sub_df_1 <- subset(df_3_R,Cost.Price > 300)
 #
@@ -885,15 +944,46 @@ plot(df_a1$a5,df_a1$a6,col=c("red","blue"))
 # VERY VERY VERY Important - NOT CAUSATION ... so how do we 
 # ascertain CAUSATION , we shall see within this text soon. 
 
+# Again we plot multiple plots within a PLOT MATRIX using par() 
+opar <- par(no.readonly=TRUE)
+par(mfrow=c(2,2)) # 2 - ROWS , 2 - COLUMNS 
+#
+plot(df_a1$a1,df_a1$a3,col=c("blue","red"),main="Plot_A [Negative_Corr.]")
+#
+plot(df_a1$a1,df_a1$a5,col=c("blue","green"),main="Plot_B [Slight Positive_Corr.]")
+#
+plot(df_a1$a1,df_a1$a6,col=c("blue","orange"),main="Plot_C [Negative_Corr.]")
+#
+plot(df_a1$a1,df_a1$a7,col=c("blue","yellow"),main="Plot_D [In-conclusive.]")
+#
+
 
 ```
 
+Looking at these FOUR Scatter Plots we can now have a basic level discussion about - CORRELATION
+amongst different variables in any given Data Set.
+
+We have chosen to have - variable "a1" on the X Axis of all Four Plots .
+
+Plot_A - Var "a1" and "a3" seem to be Highly Correlated . As values of "a1" increase 
+the values of "a3" decrease.
+
+Plot_B - Var "a1" and "a5" seem to be Slightly Correlated . As values of "a1" increase , 
+some of the values of "a5" decrease.
+
+Plot_C - Var "a1" and "a6" seem to be Highly Correlated . As values of "a1" increase 
+the values of "a6" decrease.
+
+Plot_D - We are not able to draw any inference for Correlation.
 
 
 
 
 ```{r}
 # Code Section -30
+
+
+
 
 
 ```
