@@ -1,9 +1,9 @@
 ---
 title: "R for Beginners - R Code File -2"
 output:
-  pdf_document: default
-  html_notebook: default
   html_document: default
+  html_notebook: default
+  pdf_document: default
 urlcolor: blue
 ---
 
@@ -593,17 +593,24 @@ summary(sub_num_vector3)
 ```
 
 
-# describeBy() with Grouping variables 
+# describeBy--- with Grouping variables 
 
 ```{r}
 # Code Section -19
 
 library("psych", lib.loc="~/R/x86_64-pc-linux-gnu-library/3.3")
 library(psych)
+#
 
+#
+
+
+#
+
+detach("package:psych", unload=TRUE)
 #?describeBy() # Seek HELP for the function - Uncomment this line. 
 
-describeBy(df_3_C,df_3_C$Date.of.Invoice) 
+#describeBy(df_3_C,df_3_C$Date.of.Invoice) 
 
 # In this case - Grouping Variable is - Date of Invoice . 
 # This Grouping variable has two Values here - 01-01-2013 and 02-01-2013
@@ -629,8 +636,8 @@ library(help = "datasets")
 
 
 # 
-# Seen below are the DataSets available within my installed version of R - 
-# yours may slightly differ :- 
+# Seen below are the DataSets available within my installed version of R -
+# yours may slightly differ :-
 # 
 # AirPassengers           Monthly Airline Passenger Numbers 1949-1960
 # BJsales                 Sales Data with Leading Indicator
@@ -810,6 +817,12 @@ print(df_1[2]) # Will Print 2nd COLUMN - ALL ROWS - of the DF as a SLICE.
 #
 print(df_1[2,]) # Will Print 2nd ROW - ALL COLUMNS - of the DF as a SLICE. 
 #
+df_temp1 <- (df_1[2,])
+df_temp1
+View(df_temp1)
+#
+summary(df_temp1)
+
 print(df_1[c(2,4,6)]) # Using an INDEX VECTOR  - created with COMBINE Function. 
 # To access MULTIPLE COLUMNS - 2,4 and 6 of the DF.
 
@@ -822,7 +835,7 @@ basic introductory graphs there - we use - dir.create()
 ```{r}
 # Code Section -25
 
-#dir.create("/home/dhankar/Desktop/R_Own/Plots/Intro_1/", recursive=TRUE) # to be RUN only Once
+#dir.create("/home/dhankar/Desktop/R_Own/Plots/Intro_2/", recursive=TRUE) # to be RUN only Once
 
 ```
 
@@ -832,7 +845,7 @@ Over the next couple of sections we shall preview the basics of Plots and Graphs
 
 If we were to execute the code from the following sections , in the Console- the
 Graphs would not appear inline but would appear within the PLOTS pane 
-of R Studio or in certain cases as  POP Up's . 
+of R Studio or in certain cases as  POP Up's. 
 
 
 # HISTOGRAM an Introduction 
@@ -865,32 +878,23 @@ matrix of nrows X ncolumns - of various plots and graphs
 #?par() # Uncomment for Help 
 
 opar <- par(no.readonly=TRUE)
-par(mfrow=c(2,1)) # 2 - ROWS , 1 - COLUMN - Filled in by ROWS 
-# or we may use - mfcol=c() , to fill by COLUMNS
-
+par(mfrow=c(2,1)) # 2 - ROWS , 1 - COLUMN - Filled in by ROWS # or we may use - mfcol=c() , to fill by COLUMNS
 hist(df_1$Cost.Price,col.main="blue",col = "green")
-#
 hist(df_1$Sales.Price,col.main="blue",col = "orange")
 
 # Next lets try - sub-plot in 2 COLUMNS and 1 ROW 
 
 opar <- par(no.readonly=TRUE)
-par(mfrow=c(1,2)) # 1 - ROW , 1 - COLUMNS 
-
+par(mfrow=c(1,2)) # 1 - ROW , 2 - COLUMNS 
 hist(df_1$Cost.Price,col.main="black",col = "yellow")
-#
 hist(df_1$Sales.Price,col.main="black",col = "red")
 
 #
 opar <- par(no.readonly=TRUE)
 par(mfrow=c(2,2)) # 2 - ROWS , 2 - COLUMNS 
-#
 plot(df_1$Date.of.Invoice,df_1$Sales.Price,col=c("red","yellow"))
-#
 hist(df_1$Cost.Price,col.main="black",col = "yellow")
-#
 plot(df_1$Date.of.Invoice,df_1$Cost.Price,col=c("green","yellow"))
-#
 hist(df_1$Sales.Price,col.main="black",col = "red")
 
 ```
@@ -907,12 +911,9 @@ hist(df_1$Sales.Price,col.main="black",col = "red")
 
 layout(matrix(1, 2, byrow = TRUE),widths = c(4,1),heights = c(4,1))
 
-plot(df_1$Date.of.Invoice,df_1$Sales.Price,col=c("red","yellow"))
-#
-hist(df_1$Cost.Price,col.main="black",col = "yellow")
-#
+plot(df_1$Date.of.Invoice,df_1$Sales.Price,col=c("green","yellow"))
+hist(df_1$Cost.Price,col.main="blue",col = "yellow")
 plot(df_1$Date.of.Invoice,df_1$Cost.Price,col=c("green","yellow"))
-#
 hist(df_1$Sales.Price,col.main="black",col = "red")
 
 ```
@@ -924,10 +925,12 @@ hist(df_1$Sales.Price,col.main="black",col = "red")
 # Code Section -29
 
 df_a1 <- read.csv("~/Desktop/R_Own/Data_Directory/mcprod.csv")
+
+## CHECK --- Why not Factor Variables ??
 #
 summary(df_a1)
 #
-plot(df_a1$a5,df_a1$a6,col=c("red","blue"))
+plot(df_a1$a6,df_a1$a5,col=c("red","green"))
 #
 # Its a Synthetic Simulated Dataset for learning purposes ...
 # As seen below - Variables a1,a3,a5-a7 == Double / Decimal 
@@ -957,6 +960,8 @@ plot(df_a1$a1,df_a1$a6,col=c("blue","orange"),main="Plot_C [Negative_Corr.]")
 plot(df_a1$a1,df_a1$a7,col=c("blue","yellow"),main="Plot_D [In-conclusive.]")
 #
 
+##### Next Section Lets Look at CORRPLOTS --- or 
+# Correlation Plots for all Variables with all the Other Variables 
 
 ```
 
