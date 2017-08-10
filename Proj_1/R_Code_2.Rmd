@@ -281,6 +281,12 @@ class(nm_v)
 nm_v + 2 
 #
 
+#Dimensions of the Num Vector as below :- 
+# Even 
+# ?dim() # Uncomment - needs further clarity for VECTORS - why NULL 
+dim(nm_v+2) ## Prints NULL 
+dim(nm_v) 
+#
 #Summary of the Num Vector as below :- 
 #
 summary(nm_v+2)
@@ -291,7 +297,9 @@ nm_v
 
 sum(nm_v+5)
 #
-sd(nm_v+5) ## CHECK  -- Standard Deviation in much detail 
+sd(nm_v+5) 
+## CHECK  -- Standard Deviation to be dealt in text later 
+# further detailing required 
 #
 max(nm_v+5)
 #
