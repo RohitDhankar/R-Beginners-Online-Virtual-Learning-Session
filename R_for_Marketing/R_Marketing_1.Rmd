@@ -1,9 +1,9 @@
 ---
 title: "R for Beginners - R for Marketing Code File-1"
 output:
-  html_document: default
-  html_notebook: default
   pdf_document: default
+  html_notebook: default
+  html_document: default
 urlcolor: blue
 ---
 
@@ -23,9 +23,29 @@ Its a good practice from time to time to keep a track of our current Working Dir
 # R for Marketing 
 
 ```{r}
+# Simulating own Synthetic Data for analysis by Marketing Function
 
-getwd()
+# Set Seed -- ensure reproducible results 
+
+set.seed(123)
+
+mstore_ids <- 101:120 # A range to create Dummy Store ID's 
+
+
+# Using - runif() # runif generates random deviates.
+xm <- runif(20,min=100,max=120)
+am <- runif(100,min=5,max=10)
+bm <- runif(100,min=25,max=30)
+
+# Created Two Num Vectors with DOUBLE or Decimal Point nums 
+# uncomment to run code - Not required ...
+#am
 #
-ls()
+#bm
+#
+#typeof(am)
+#class(am)
+
+
 
 ```
