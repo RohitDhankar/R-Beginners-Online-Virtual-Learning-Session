@@ -29,7 +29,16 @@ Its a good practice from time to time to keep a track of our current Working Dir
 
 set.seed(123)
 
-mstore_ids <- 101:120 # A range to create Dummy Store ID's 
+# Presume a retail stores chain called - Mkt , having 20 Stores
+
+mstore_ids <- 101:120 # Range to create Dummy Mkt Store ID's 
+mstore_country_1 <- c(rep("IND",5))
+mstore_country_2 <- c(rep("AUS",3))
+mstore_country_3 <- c(rep("NZ",12))
+#
+mstore_city_1 <- c(rep("CTY_1",5))
+mstore_city_2 <- c(rep("CTY_2",3))
+mstore_city_3 <- c(rep("CTY_3",12))
 
 
 # Using - runif() # runif generates random deviates.
