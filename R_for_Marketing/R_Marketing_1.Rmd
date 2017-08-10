@@ -1,0 +1,31 @@
+---
+title: "R for Beginners - R for Marketing Code File-1"
+output:
+  html_document: default
+  html_notebook: default
+  pdf_document: default
+urlcolor: blue
+---
+
+
+
+This R code book has been written by [Rohit Dhankar](https://github.com/RohitDhankar) . GitHub - https://github.com/RohitDhankar 
+
+
+This is the 3rd in series of R Code Files.     
+
+
+Refer GitHub Repository , for all Data Files --> https://github.com/RohitDhankar/R-Beginners-Online-Virtual-Learning-Session    
+
+
+Its a good practice from time to time to keep a track of our current Working Directory and list out all the Objects in our R ENVIRONMENT - specially so when we are committing changes to a Git Remote.   
+
+# R for Marketing 
+
+```{r}
+
+getwd()
+#
+ls()
+
+```

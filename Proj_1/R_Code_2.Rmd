@@ -1,13 +1,13 @@
 ---
 title: "R for Beginners - R Code File -2"
 output:
-  html_document: default
-  html_notebook: default
   pdf_document: default
+  html_notebook: default
+  html_document: default
 urlcolor: blue
 ---
 
-https://www.youtube.com/watch?v=vF0M-1OJlWI
+
 This R code book has been written by [Rohit Dhankar](https://github.com/RohitDhankar) . GitHub - https://github.com/RohitDhankar 
 
 
