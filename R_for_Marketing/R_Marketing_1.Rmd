@@ -116,6 +116,51 @@ head(mdf)
 summary(mdf) # Summary of DF
 #
 str(mdf) # Structure of DF 
-#
+
+
+
+# > mdf2<-mdf$p_sale_count
+# > mdf3<-mdf$p_sale_cost
+# > mdf4<-mdf$p_sale_count*mdf$p_sale_cost
+# > 
+# > View(mdf2)
+# > mdf2<-mdf$p_sale_count[2,]
+# Error in mdf$p_sale_count[2, ] : incorrect number of dimensions
+# > mdf2<-mdf$p_sale_count[2]
+# > mdf2
+# [1] 115.7661
+# > mdf2<-mdf$p_sale_count[2:5]
+# > mdf2
+# [1] 115.7661 108.1795 117.6603 118.8093
+# > mdf3<-mdf$p_sale_cost[2:5]
+# > mdf3
+# [1] 114.2312 115.4242 112.9459 118.9549
+# > mdf4<- mdf2*mdf3
+# > mdf4
+# [1] 13224.10 12486.54 13289.26 14132.95
+# > 115*114
+# [1] 13110
+ 
+```
+#Speeding up Code  
+
+Efficiency Tradeoff --- 
+
+Will we Multiply TWO Vectors 
+
+OR 
+
+Will we Multiply TWO DF Column Vectors 
+
+There are 
+
+
+
+
+```{r}
+
 
 ```
+
+
+
