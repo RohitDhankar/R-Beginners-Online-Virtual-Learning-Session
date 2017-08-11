@@ -191,6 +191,10 @@ proc.time() - ptm
 # once we have the "vec_gross_sale" 
 # we will need to add it to out "mdf"
 
+# Kindly also note the Timings will
+# differ for each system - also for each run 
+# of the chunk of code on same sys
+
 # Definition of user Time --- The ‘user time’ is the CPU time 
 # charged for execution of user instructions of the calling process.
 #
@@ -217,6 +221,10 @@ str(mdf)
 #
 summary(mdf)
 #
+write.csv(mdf,file="DATA_Files/mdf.csv") 
+## Writes to Sub Directory - DATA_Files
+#
+##### TBD --- DF to CSV and share CSV on GHub 
 
 ```
 
