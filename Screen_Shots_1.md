@@ -10,9 +10,6 @@ SCREEN_SHOT_1:
 ![alt text](../master/Images_R_ScreenShots/1_1.png "SCREEN_SHOT_1")
 #
 
-![github-repo-page](https://cloud.githubusercontent.com/assets/194400/8930109/d8a76ab8-3522-11e5-8e07-95596a889fde.png)
-
-
 SCREEN_SHOT_2: 
 ![alt text](../master/Images_R_ScreenShots/1_2.png "SCREEN_SHOT_2")
 #  
