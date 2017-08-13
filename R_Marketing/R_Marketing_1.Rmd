@@ -131,15 +131,18 @@ pcost_10 <- runif(aa,min=5500.44,max=30000.78) ##
 #
 # Data Frame from NUMERIC and CHARACTER VECTORS
 #
+p_sale_count<-c(psale_1,psale_2,psale_3,psale_4,psale_5,psale_6,psale_7,psale_8,psale_9,psale_10)
+p_sale_count_rnd<-round(p_sale_count,digits = 0)
+p_sale_cost<-c(pcost_1,pcost_2,pcost_3,pcost_4,pcost_5,pcost_6,pcost_7,pcost_8,pcost_9,pcost_10)
+p_sale_cost_rnd<-round(p_sale_cost,digits = 2)                  
 # p_sale_count == PRODUCT Sale Count - How many Sold !
 #
 mdf <- data.frame(cty_name= c(ms_cty1,ms_cty2,ms_cty3,ms_cty4,ms_cty5,ms_cty6,ms_cty7,ms_cty8,ms_cty9,ms_cty10),
                   country_name= c(ms_cntry1,ms_cntry2,ms_cntry3,ms_cntry4,ms_cntry5,ms_cntry6,ms_cntry7,ms_cntry8,ms_cntry9,ms_cntry10),
-                  p_sale_count= c(psale_1,psale_2,psale_3,psale_4,psale_5,psale_6,psale_7,psale_8,psale_9,psale_10),
-                  p_sale_cost= c(pcost_1,pcost_2,pcost_3,pcost_4,pcost_5,pcost_6,pcost_7,pcost_8,pcost_9,pcost_10),
+                  p_sale_count_rnd, p_sale_cost_rnd , 
                   var_dates=c(dates_aa,dates_bb,dates_cc,dates_dd,dates_ee,dates_ff,dates_gg,dates_hh,dates_ii,dates_jj))
 # #
-head(mdf)
+head(mdf,n=20)
 #
 length(mdf$cty_name)
 #
@@ -147,6 +150,10 @@ summary(mdf) # Summary of DF
 #
 str(mdf) # Structure of DF
 # #
+#Explicitly check the Class and Typeof 
+class(mdf$cty_name);class(mdf$country_name);class(mdf$var_dates)
+#
+typeof(mdf$cty_name);typeof(mdf$country_name);typeof(mdf$var_dates)
 
  
 ```
@@ -183,11 +190,7 @@ Rohit Dhankar claims no copyright to any of this code.
 
 ```{r}
 
-# Firstly lets create and multiply TWO Vectors 
 
-p_sale_count<-c(psale_1,psale_2,psale_3,psale_4,psale_5,psale_6,psale_7,psale_8,psale_9,psale_10)
-
-p_sale_cost<-c(pcost_1,pcost_2,pcost_3,pcost_4,pcost_5,pcost_6,pcost_7,pcost_8,pcost_9,pcost_10)
 
 
 ```
@@ -199,7 +202,8 @@ p_sale_cost<-c(pcost_1,pcost_2,pcost_3,pcost_4,pcost_5,pcost_6,pcost_7,pcost_8,p
 # Start the clock!
 ptm <- proc.time()
 
-vec_gross_sale <- p_sale_count*p_sale_cost
+vec_gross_sale <- p_sale_count_rnd*p_sale_cost_rnd
+
 summary(vec_gross_sale)
 
 proc.time() - ptm 
@@ -244,7 +248,7 @@ proc.time() - ptm
 # Again start the clock!
 ptm <- proc.time()
 
-mdf$gross_sale<- mdf$p_sale_count*mdf$p_sale_cost
+mdf$gross_sale<- mdf$p_sale_count_rnd*mdf$p_sale_cost_rnd
 
 proc.time() - ptm 
 #
@@ -261,6 +265,7 @@ write.csv(mdf,file="Mkt_DATA_Files/mdf.csv")
 
 
 ```{r}
+
 
 
 ```
