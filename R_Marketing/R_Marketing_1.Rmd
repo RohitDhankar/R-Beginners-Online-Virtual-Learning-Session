@@ -252,7 +252,7 @@ str(mdf)
 #
 summary(mdf)
 #
-write.csv(mdf,file="DATA_Files/mdf.csv") 
+write.csv(mdf,file="Mkt_DATA_Files/mdf.csv") 
 ## Writes to Sub Directory - DATA_Files
 #
 
