@@ -50,11 +50,13 @@ plot.ts(ts_infy,main="NSE-INFY-STOCK_PRICE_DAILY_CLOSING",col="green")
 ```
 
 ```{r}
-#?ts()
+#?ts() ## Uncomment to seek help 
 # frequency	---
 # the number of observations per unit of time.
 # deltat	---
-# the fraction of the sampling period between successive observations; e.g., 1/12 for monthly data. Only one of frequency or deltat should be provided.
+# the fraction of the sampling period between successive 
+# observations; e.g., 1/12 for monthly data. Only one of frequency 
+# or deltat should be provided.
 #
 ts_infy1 <-ts(infy_df, start = c(2015,8), end =  c(2017,8), frequency = 24,names = "NSE-INFY-STOCK_PRICE_DAILY_CLOSING") #
 #
@@ -66,20 +68,92 @@ typeof(ts_infy) ## [1] "double"
 #
 class(ts_infy)
 #
-plot.ts(ts_infy1,main="NSE-INFY-STOCK_PRICE_DAILY_CLOSING",col="blue")
+head(ts_infy1);head(time(ts_infy1));tail(time(ts_infy1)) 
+# Head of TS # view Head - sampled times # view Tail of sampled times
+dim(ts_infy1);
+#
+tsdisplay(ts_infy1)
+#
+plot.ts(ts_infy1,main="NSE-INFY-STOCK_PRICE_DAILY_CLOSING",col="blue",xlab="YEAR + MONTH",ylab="INFY- DAILY_CLOSING")
+
+
+```
+
+# Decomposition of TIME SERIES :- 
+
+" to construct, from an observed time series, a number of   
+component series (that could be used to reconstruct the original by additions   
+or multiplications) where each of these has a certain characteristic or type of behaviour.  
+
+SOURCE -- WIKI -- https://en.wikipedia.org/wiki/Decomposition_of_time_series
+
+ There are many lively discussions with regards which functions from the STATS  
+ package to be used for decomposition i am refering a few below here - i shall  
+ experiment with a couple of methods and see what works best for best.   
+ 
+
+```{r}
+#
+
+
+
+```
+Various Sources ---  
+
+STACK_EXCHANGE --  https://stats.stackexchange.com/questions/9506/stl-trend-of-time-series-using-r?rq=1  
+
+STACK_EXCHANGE --  https://stats.stackexchange.com/questions/85987/which-is-better-stl-or-decompose  
+
+
+# ESTIMATING and ELIMINATING THE TREND 
+
+We need to identify , then estimate and eliminate the trend component if present  
+in the Time Series Model .We also endevaour to eliminate the other TWO   
+Deterministic Features of the TS MODEL   
+
+We are dealing with DISCRETE data of Stock Price Closing Values as   
+taken from the NSE on 18 AUG 17   
+
+SOURCE --- http://userwww.sfsu.edu/efc/classes/biol710/timeseries/TimeSeriesAnalysis.html
+
+Learning pointers to be highlighted from the above cited source - 
+
+STATIONARY TIME SERIES DATA - 
+
+Definitions -- TBD 
+
+NON STATIONARY TIME SERIES DATA - 
+
+Quoting verbatim from the source mentioned above -- 
+"Box and Jenkins developed the AutoRegressive Integrative Moving Average (ARIMA) model  
+which combined the AutoRegresive (AR) and Moving Average (MA) models developed earlier  
+with a differencing factor that removes in trend in the data.
+"
+
+Further Reading -- Multiple Sources :- 
+WIKI --- 
+
+
+```{r}
+#?stl() # stl {stats}
+# Decompose a time series into seasonal, trend and irregular 
+# components using loess, acronym STL.
+
+require(graphics)
+
+plot(stl(ts_infy1, "per"))
+plot(stl(ts_infy1, s.window = 7, t.window = 50, t.jump = 1))
+
+#plot(stllc <- stl(log(co2), s.window = 21))
+#summary(stllc)
 
 
 ```
 
 
-```{r}
-
-
-```
-
 
 ```{r}
-
+dcomp_infy_1 <-stl(ts_infy1,s.window = 12,t.window = 10) ;head(dcomp_infy_1$time.series) ;str(dcomp_infy_1) 
 
 ```
 
@@ -87,6 +161,17 @@ plot.ts(ts_infy1,main="NSE-INFY-STOCK_PRICE_DAILY_CLOSING",col="blue")
 
 ```{r}
 
+typeof(dcomp_infy_1) # LIST 
+summary(dcomp_infy_1)
+
+# We focus on the IQR Values --- 
+
+# IQR:
+#      STL.seasonal STL.trend STL.remainder data 
+#      23.25        37.02     10.43         45.65
+#    %  50.9         81.1      22.9         100.0
+
+
 
 ```
 
@@ -94,13 +179,7 @@ plot.ts(ts_infy1,main="NSE-INFY-STOCK_PRICE_DAILY_CLOSING",col="blue")
 
 ```{r}
 
-
-```
-
-
-
-```{r}
-
+plot(dcomp_infy_1,main="Additive Decomposition -> Data[Yt],Seasonal[St],Trend[Mt] and Remainder[Et]",col="blue") 
 
 ```
 
@@ -154,34 +233,8 @@ plot.ts(ts_infy1,main="NSE-INFY-STOCK_PRICE_DAILY_CLOSING",col="blue")
 
 
 
-# CHECK --- Could i have done this faster in Python ?? 
-
-
-# Func - seq(as.Date ...)
-# REFER -- https://stat.ethz.ch/R-manual/R-devel/library/base/html/seq.Date.html
-
-#
-# #
-# head(mdf,n=20)
-# #
-# length(mdf$cty_name)
-# #
-# summary(mdf) # Summary of DF
-# #
-# str(mdf) # Structure of DF
-# # #
-# #Explicitly check the Class and Typeof 
-# class(mdf$cty_name);class(mdf$country_name);class(mdf$var_dates)
-# #
-# typeof(mdf$cty_name);typeof(mdf$country_name);typeof(mdf$var_dates)
-
  
 ```
-# Section -2   
-
-Also many other sources from the net.  
-Rohit Dhankar claims no copyright to any of this code.   
-
 
 
 
