@@ -27,8 +27,24 @@ library("tseries")
 ```
 
 ```{r}
+# Set Seed -- ensure reproducible results 
 
+set.seed(123)
 
+infy_df <- read.csv("~/Desktop/R_Own/R_Finance/DATA_Files/INFY.csv")
+str(infy_df)
+summary(infy_df)
+#start_date <- infy_df$Date[1] ## [1] 19-Aug-2015
+#len_df<-length(infy_df$Date)
+#end_date <-infy_df$Date[len_df] ## [1] 17-Aug-2017
+
+# Convert DF to TS 
+#ts_infy <-ts(infy_df, start = start_date, end = end_date,  frequency = 12) #
+ts_infy <-ts(infy_df, start = c(2015,8), end =  c(2017,8),  frequency = 12) #
+plot(ts_infy)
+
+#
+#
 
 
 ```
@@ -36,17 +52,6 @@ library("tseries")
 
 
 ```{r}
-# Simulating Synthetic Data 
-
-# Set Seed -- ensure reproducible results 
-
-set.seed(123)
-
-# . 
-
-
-# Scalar Vector Constant - tweak to change DF Dimensions
-aa<-1500
 
 # 
 
