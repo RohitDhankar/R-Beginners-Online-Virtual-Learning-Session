@@ -1,0 +1,556 @@
+### DUMP
+
+# Packages used --
+library("forecast", lib.loc="~/R/win-library/3.1");library("ggplot2", lib.loc="~/R/win-library/3.1");liblibrary(ggfortify) # ggplot of Time Series data . library("tseries", lib.loc="~/R/win-library/3.1")
+
+
+#### DUMP ----
+
+
+R version 3.3.2 (2016-10-31) -- "Sincere Pumpkin Patch"
+Copyright (C) 2016 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> 
+> library("forecast");
+Error in library("forecast") : there is no package called ‘forecast’
+> install.packages("forecast")
+Installing package into ‘/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3’
+(as ‘lib’ is unspecified)
+also installing the dependencies ‘xts’, ‘TTR’, ‘quadprog’, ‘quantmod’, ‘tseries’, ‘fracdiff’, ‘timeDate’, ‘RcppArmadillo’
+
+trying URL 'https://cran.rstudio.com/src/contrib/xts_0.10-0.tar.gz'
+Content type 'application/x-gzip' length 518931 bytes (506 KB)
+==================================================
+downloaded 506 KB
+
+trying URL 'https://cran.rstudio.com/src/contrib/TTR_0.23-2.tar.gz'
+Content type 'application/x-gzip' length 309438 bytes (302 KB)
+==================================================
+downloaded 302 KB
+
+trying URL 'https://cran.rstudio.com/src/contrib/quadprog_1.5-5.tar.gz'
+Content type 'application/x-gzip' length 33651 bytes (32 KB)
+==================================================
+downloaded 32 KB
+
+trying URL 'https://cran.rstudio.com/src/contrib/quantmod_0.4-10.tar.gz'
+Content type 'application/x-gzip' length 137508 bytes (134 KB)
+==================================================
+downloaded 134 KB
+
+trying URL 'https://cran.rstudio.com/src/contrib/tseries_0.10-42.tar.gz'
+Content type 'application/x-gzip' length 164529 bytes (160 KB)
+==================================================
+downloaded 160 KB
+
+trying URL 'https://cran.rstudio.com/src/contrib/fracdiff_1.4-2.tar.gz'
+Content type 'application/x-gzip' length 57636 bytes (56 KB)
+==================================================
+downloaded 56 KB
+
+trying URL 'https://cran.rstudio.com/src/contrib/timeDate_3012.100.tar.gz'
+Content type 'application/x-gzip' length 314306 bytes (306 KB)
+==================================================
+downloaded 306 KB
+
+trying URL 'https://cran.rstudio.com/src/contrib/RcppArmadillo_0.7.960.1.0.tar.gz'
+Content type 'application/x-gzip' length 1115176 bytes (1.1 MB)
+==================================================
+downloaded 1.1 MB
+
+trying URL 'https://cran.rstudio.com/src/contrib/forecast_8.1.tar.gz'
+Content type 'application/x-gzip' length 783567 bytes (765 KB)
+==================================================
+downloaded 765 KB
+
+* installing *source* package ‘xts’ ...
+** package ‘xts’ successfully unpacked and MD5 sums checked
+** libs
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -I../inst/include  -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/zoo/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c add_class.c -o add_class.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -I../inst/include  -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/zoo/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c any.c -o any.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -I../inst/include  -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/zoo/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c attr.c -o attr.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -I../inst/include  -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/zoo/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c binsearch.c -o binsearch.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -I../inst/include  -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/zoo/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c coredata.c -o coredata.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -I../inst/include  -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/zoo/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c diff.c -o diff.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -I../inst/include  -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/zoo/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c dimnames.c -o dimnames.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -I../inst/include  -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/zoo/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c endpoints.c -o endpoints.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -I../inst/include  -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/zoo/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c extract_col.c -o extract_col.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -I../inst/include  -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/zoo/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -I../inst/include  -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/zoo/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c isOrdered.c -o isOrdered.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -I../inst/include  -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/zoo/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c isXts.c -o isXts.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -I../inst/include  -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/zoo/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c leadingNA.c -o leadingNA.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -I../inst/include  -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/zoo/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c merge.c -o merge.o
+gfortran   -fpic  -g -O2 -fstack-protector-strong  -c period.max.f -o period.max.o
+gfortran   -fpic  -g -O2 -fstack-protector-strong  -c period.min.f -o period.min.o
+gfortran   -fpic  -g -O2 -fstack-protector-strong  -c period.prod.f -o period.prod.o
+gfortran   -fpic  -g -O2 -fstack-protector-strong  -c period.sum.f -o period.sum.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -I../inst/include  -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/zoo/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c rbind.c -o rbind.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -I../inst/include  -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/zoo/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c rollfun.c -o rollfun.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -I../inst/include  -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/zoo/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c runSum.c -o runSum.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -I../inst/include  -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/zoo/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c startofyear.c -o startofyear.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -I../inst/include  -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/zoo/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c subset.c -o subset.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -I../inst/include  -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/zoo/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c subset.old.c -o subset.old.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -I../inst/include  -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/zoo/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c toperiod.c -o toperiod.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -I../inst/include  -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/zoo/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c totalcols.c -o totalcols.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -I../inst/include  -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/zoo/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c tryXts.c -o tryXts.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -I../inst/include  -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/zoo/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c unique.time.c -o unique.time.o
+gcc -std=gnu99 -shared -L/usr/lib/R/lib -Wl,-Bsymbolic-functions -Wl,-z,relro -o xts.so add_class.o any.o attr.o binsearch.o coredata.o diff.o dimnames.o endpoints.o extract_col.o init.o isOrdered.o isXts.o leadingNA.o merge.o period.max.o period.min.o period.prod.o period.sum.o rbind.o rollfun.o runSum.o startofyear.o subset.o subset.old.o toperiod.o totalcols.o tryXts.o unique.time.o -lgfortran -lm -lquadmath -L/usr/lib/R/lib -lR
+installing to /home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/xts/libs
+** R
+** data
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded
+* DONE (xts)
+* installing *source* package ‘quadprog’ ...
+** package ‘quadprog’ successfully unpacked and MD5 sums checked
+
+installing to /home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/xts/libs
+** R
+** data
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded
+* DONE (xts)
+* installing *source* package ‘quadprog’ ...
+** package ‘quadprog’ successfully unpacked and MD5 sums checked
+** libs
+gfortran  -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong  -c aind.f -o aind.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gfortran -fvisibility=hidden -fpic -g -O2 -fstack-protector-strong -ffloat-store   -c -o solve.QP.compact.o solve.QP.compact.f
+gfortran -fvisibility=hidden -fpic -g -O2 -fstack-protector-strong -ffloat-store   -c -o solve.QP.o solve.QP.f
+gfortran  -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong  -c util.f -o util.o
+gcc -std=gnu99 -shared -L/usr/lib/R/lib -Wl,-Bsymbolic-functions -Wl,-z,relro -o quadprog.so aind.o init.o solve.QP.compact.o solve.QP.o util.o -lblas -lgfortran -lm -lquadmath -lgfortran -lm -lquadmath -L/usr/lib/R/lib -lR
+installing to /home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/quadprog/libs
+** R
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+* DONE (quadprog)
+* installing *source* package ‘fracdiff’ ...
+** package ‘fracdiff’ successfully unpacked and MD5 sums checked
+** libs
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c fdcore.c -o fdcore.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c fdgam.c -o fdgam.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c fdhess.c -o fdhess.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c fdmin.c -o fdmin.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c fdsim.c -o fdsim.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c pmult.c -o pmult.o
+gcc -std=gnu99 -shared -L/usr/lib/R/lib -Wl,-Bsymbolic-functions -Wl,-z,relro -o fracdiff.so fdcore.o fdgam.o fdhess.o fdmin.o fdsim.o init.o pmult.o -lblas -lgfortran -lm -lquadmath -L/usr/lib/R/lib -lR
+installing to /home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/fracdiff/libs
+** R
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+* DONE (fracdiff)
+* installing *source* package ‘timeDate’ ...
+** package ‘timeDate’ successfully unpacked and MD5 sums checked
+** R
+** inst
+** preparing package for lazy loading
+Creating a generic function for ‘sample’ from package ‘base’ in package ‘timeDate’
+Creating a generic function for ‘getDataPart’ from package ‘methods’ in package ‘timeDate’
+Creating a generic function for ‘abline’ from package ‘graphics’ in package ‘timeDate’
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+* DONE (timeDate)
+* installing *source* package ‘RcppArmadillo’ ...
+** package ‘RcppArmadillo’ successfully unpacked and MD5 sums checked
+checking whether the C++ compiler works... yes
+checking for C++ compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking how to run the C++ preprocessor... g++ -E
+checking whether we are using the GNU C++ compiler... (cached) yes
+checking whether g++ accepts -g... (cached) yes
+checking whether g++ version is sufficient... (5.4.0) yes
+checking LAPACK_LIBS... system LAPACK found
+configure: creating ./config.status
+config.status: creating inst/include/RcppArmadilloLapack.h
+** libs
+g++ -I/usr/share/R/include -DNDEBUG   -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/Rcpp/include"  -I../inst/include -fopenmp  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c RcppArmadillo.cpp -o RcppArmadillo.o
+In file included from ../inst/include/armadillo:52:0,
+                 from ../inst/include/RcppArmadilloForward.h:46,
+                 from ../inst/include/RcppArmadillo.h:31,
+                 from RcppArmadillo.cpp:22:
+../inst/include/armadillo_bits/compiler_setup.hpp:487:118: note: #pragma message: WARNING: support for OpenMP requires C++11/C++14; add -std=c++11 or -std=c++14 to compiler flags
+   #pragma message ("WARNING: support for OpenMP requires C++11/C++14; add -std=c++11 or -std=c++14 to compiler flags")
+                                                                                                                      ^
+g++ -I/usr/share/R/include -DNDEBUG   -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/Rcpp/include"  -I../inst/include -fopenmp  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c RcppExports.cpp -o RcppExports.o
+In file included from ../inst/include/armadillo:52:0,
+                 from ../inst/include/RcppArmadilloForward.h:46,
+                 from ../inst/include/RcppArmadillo.h:31,
+                 from RcppExports.cpp:4:
+../inst/include/armadillo_bits/compiler_setup.hpp:487:118: note: #pragma message: WARNING: support for OpenMP requires C++11/C++14; add -std=c++11 or -std=c++14 to compiler flags
+   #pragma message ("WARNING: support for OpenMP requires C++11/C++14; add -std=c++11 or -std=c++14 to compiler flags")
+                                                                                                                      ^
+g++ -I/usr/share/R/include -DNDEBUG   -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/Rcpp/include"  -I../inst/include -fopenmp  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c fastLm.cpp -o fastLm.o
+In file included from ../inst/include/armadillo:52:0,
+                 from ../inst/include/RcppArmadilloForward.h:46,
+                 from ../inst/include/RcppArmadillo.h:31,
+                 from fastLm.cpp:22:
+../inst/include/armadillo_bits/compiler_setup.hpp:487:118: note: #pragma message: WARNING: support for OpenMP requires C++11/C++14; add -std=c++11 or -std=c++14 to compiler flags
+   #pragma message ("WARNING: support for OpenMP requires C++11/C++14; add -std=c++11 or -std=c++14 to compiler flags")
+                                                                                                                      ^
+g++ -shared -L/usr/lib/R/lib -Wl,-Bsymbolic-functions -Wl,-z,relro -o RcppArmadillo.so RcppArmadillo.o RcppExports.o fastLm.o -fopenmp -llapack -lblas -lgfortran -lm -lquadmath -L/usr/lib/R/lib -lR
+installing to /home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/RcppArmadillo/libs
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded
+* DONE (RcppArmadillo)
+* installing *source* package ‘TTR’ ...
+** package ‘TTR’ successfully unpacked and MD5 sums checked
+** libs
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG   -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/xts/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c adjRatios.c -o adjRatios.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG   -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/xts/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c aroon.c -o aroon.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG   -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/xts/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gfortran   -fpic  -g -O2 -fstack-protector-strong  -c movingAverages.f -o movingAverages.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG   -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/xts/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c moving_averages.c -o moving_averages.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG   -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/xts/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c percent_rank.c -o percent_rank.o
+gfortran   -fpic  -g -O2 -fstack-protector-strong  -c runFun.f -o runFun.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG   -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/xts/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c sar.c -o sar.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG   -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/xts/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c wilderSum.c -o wilderSum.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG   -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/xts/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c zigzag.c -o zigzag.o
+gcc -std=gnu99 -shared -L/usr/lib/R/lib -Wl,-Bsymbolic-functions -Wl,-z,relro -o TTR.so adjRatios.o aroon.o init.o movingAverages.o moving_averages.o percent_rank.o runFun.o sar.o wilderSum.o zigzag.o -lgfortran -lm -lquadmath -L/usr/lib/R/lib -lR
+installing to /home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/TTR/libs
+** R
+** data
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+* DONE (TTR)
+* installing *source* package ‘quantmod’ ...
+** package ‘quantmod’ successfully unpacked and MD5 sums checked
+** R
+** demo
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+* DONE (quantmod)
+* installing *source* package ‘tseries’ ...
+** package ‘tseries’ successfully unpacked and MD5 sums checked
+** libs
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c arma.c -o arma.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c bdstest.c -o bdstest.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c boot.c -o boot.o
+gfortran   -fpic  -g -O2 -fstack-protector-strong  -c dsumsl.f -o dsumsl.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c formats.c -o formats.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c garch.c -o garch.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ppsum.c -o ppsum.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c tsutils.c -o tsutils.o
+gcc -std=gnu99 -shared -L/usr/lib/R/lib -Wl,-Bsymbolic-functions -Wl,-z,relro -o tseries.so arma.o bdstest.o boot.o dsumsl.o formats.o garch.o init.o ppsum.o tsutils.o -lblas -lgfortran -lm -lquadmath -lgfortran -lm -lquadmath -L/usr/lib/R/lib -lR
+installing to /home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/tseries/libs
+** R
+** data
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+* DONE (tseries)
+* installing *source* package ‘forecast’ ...
+** package ‘forecast’ successfully unpacked and MD5 sums checked
+** libs
+g++ -I/usr/share/R/include -DNDEBUG   -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/Rcpp/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/RcppArmadillo/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c calcBATS.cpp -o calcBATS.o
+g++ -I/usr/share/R/include -DNDEBUG   -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/Rcpp/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/RcppArmadillo/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c calcTBATS.cpp -o calcTBATS.o
+g++ -I/usr/share/R/include -DNDEBUG   -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/Rcpp/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/RcppArmadillo/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c etsTargetFunction.cpp -o etsTargetFunction.o
+g++ -I/usr/share/R/include -DNDEBUG   -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/Rcpp/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/RcppArmadillo/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c etsTargetFunctionWrapper.cpp -o etsTargetFunctionWrapper.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG   -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/Rcpp/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/RcppArmadillo/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c etscalc.c -o etscalc.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG   -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/Rcpp/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/RcppArmadillo/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c etspolyroot.c -o etspolyroot.o
+g++ -I/usr/share/R/include -DNDEBUG   -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/Rcpp/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/RcppArmadillo/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c makeBATSMatrices.cpp -o makeBATSMatrices.o
+g++ -I/usr/share/R/include -DNDEBUG   -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/Rcpp/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/RcppArmadillo/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c makeTBATSMatrices.cpp -o makeTBATSMatrices.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG   -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/Rcpp/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/RcppArmadillo/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c registerDynamicSymbol.c -o registerDynamicSymbol.o
+g++ -I/usr/share/R/include -DNDEBUG   -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/Rcpp/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/RcppArmadillo/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c updateMatrices.cpp -o updateMatrices.o
+g++ -I/usr/share/R/include -DNDEBUG   -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/Rcpp/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/RcppArmadillo/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c updateTBATSMatrices.cpp -o updateTBATSMatrices.o
+g++ -shared -L/usr/lib/R/lib -Wl,-Bsymbolic-functions -Wl,-z,relro -o forecast.so calcBATS.o calcTBATS.o etsTargetFunction.o etsTargetFunctionWrapper.o etscalc.o etspolyroot.o makeBATSMatrices.o makeTBATSMatrices.o registerDynamicSymbol.o updateMatrices.o updateTBATSMatrices.o -llapack -lblas -lgfortran -lm -lquadmath -L/usr/lib/R/lib -lR
+installing to /home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/forecast/libs
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded
+* DONE (forecast)
+
+The downloaded source packages are in
+	‘/tmp/RtmpXhsUZC/downloaded_packages’
+> 
+> library("forecast");
+> library("ggplot2");
+> library("ggfortify") 
+Error in library("ggfortify") : there is no package called ‘ggfortify’
+
+Restarting R session...
+
+> install.packages("ggfortify")
+Installing package into ‘/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3’
+(as ‘lib’ is unspecified)
+also installing the dependencies ‘bindr’, ‘bindrcpp’, ‘pkgconfig’, ‘tibble’, ‘plogr’, ‘dplyr’, ‘glue’, ‘purrr’, ‘rlang’, ‘tidyselect’, ‘tidyr’, ‘gridExtra’
+
+trying URL 'https://cran.rstudio.com/src/contrib/bindr_0.1.tar.gz'
+Content type 'application/x-gzip' length 5928 bytes
+==================================================
+downloaded 5928 bytes
+
+trying URL 'https://cran.rstudio.com/src/contrib/bindrcpp_0.2.tar.gz'
+Content type 'application/x-gzip' length 8089 bytes
+==================================================
+downloaded 8089 bytes
+
+trying URL 'https://cran.rstudio.com/src/contrib/pkgconfig_2.0.1.tar.gz'
+Content type 'application/x-gzip' length 6084 bytes
+==================================================
+downloaded 6084 bytes
+
+trying URL 'https://cran.rstudio.com/src/contrib/tibble_1.3.3.tar.gz'
+Content type 'application/x-gzip' length 91511 bytes (89 KB)
+==================================================
+downloaded 89 KB
+
+trying URL 'https://cran.rstudio.com/src/contrib/plogr_0.1-1.tar.gz'
+Content type 'application/x-gzip' length 7421 bytes
+==================================================
+downloaded 7421 bytes
+
+trying URL 'https://cran.rstudio.com/src/contrib/dplyr_0.7.2.tar.gz'
+Content type 'application/x-gzip' length 692952 bytes (676 KB)
+==================================================
+downloaded 676 KB
+
+trying URL 'https://cran.rstudio.com/src/contrib/glue_1.1.1.tar.gz'
+Content type 'application/x-gzip' length 11362 bytes (11 KB)
+==================================================
+downloaded 11 KB
+
+trying URL 'https://cran.rstudio.com/src/contrib/purrr_0.2.3.tar.gz'
+Content type 'application/x-gzip' length 126170 bytes (123 KB)
+==================================================
+downloaded 123 KB
+
+trying URL 'https://cran.rstudio.com/src/contrib/rlang_0.1.2.tar.gz'
+Content type 'application/x-gzip' length 201336 bytes (196 KB)
+==================================================
+downloaded 196 KB
+
+trying URL 'https://cran.rstudio.com/src/contrib/tidyselect_0.1.1.tar.gz'
+Content type 'application/x-gzip' length 18670 bytes (18 KB)
+==================================================
+downloaded 18 KB
+
+trying URL 'https://cran.rstudio.com/src/contrib/tidyr_0.7.0.tar.gz'
+Content type 'application/x-gzip' length 368687 bytes (360 KB)
+==================================================
+downloaded 360 KB
+
+trying URL 'https://cran.rstudio.com/src/contrib/gridExtra_2.2.1.tar.gz'
+Content type 'application/x-gzip' length 459488 bytes (448 KB)
+==================================================
+downloaded 448 KB
+
+trying URL 'https://cran.rstudio.com/src/contrib/ggfortify_0.4.1.tar.gz'
+Content type 'application/x-gzip' length 3604215 bytes (3.4 MB)
+==================================================
+downloaded 3.4 MB
+
+* installing *source* package ‘bindr’ ...
+** package ‘bindr’ successfully unpacked and MD5 sums checked
+** R
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+* DONE (bindr)
+* installing *source* package ‘pkgconfig’ ...
+** package ‘pkgconfig’ successfully unpacked and MD5 sums checked
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+* DONE (pkgconfig)
+* installing *source* package ‘plogr’ ...
+** package ‘plogr’ successfully unpacked and MD5 sums checked
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+* DONE (plogr)
+* installing *source* package ‘glue’ ...
+** package ‘glue’ successfully unpacked and MD5 sums checked
+** libs
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c glue.c -o glue.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c trim.c -o trim.o
+gcc -std=gnu99 -shared -L/usr/lib/R/lib -Wl,-Bsymbolic-functions -Wl,-z,relro -o glue.so glue.o init.o trim.o -L/usr/lib/R/lib -lR
+installing to /home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/glue/libs
+** R
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+* DONE (glue)
+* installing *source* package ‘rlang’ ...
+** package ‘rlang’ successfully unpacked and MD5 sums checked
+** libs
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c attrs.c -o attrs.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c capture.c -o capture.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c env.c -o env.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c eval.c -o eval.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c export.c -o export.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c formula.c -o formula.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c lang.c -o lang.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c pairlist.c -o pairlist.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c replace-na.c -o replace-na.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c sexp.c -o sexp.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c splice.c -o splice.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c symbol.c -o symbol.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c unquote.c -o unquote.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c utils.c -o utils.o
+gcc -std=gnu99 -shared -L/usr/lib/R/lib -Wl,-Bsymbolic-functions -Wl,-z,relro -o rlang.so attrs.o capture.o env.o eval.o export.o formula.o init.o lang.o pairlist.o replace-na.o sexp.o splice.o symbol.o unquote.o utils.o -L/usr/lib/R/lib -lR
+installing to /home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/rlang/libs
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded
+* DONE (rlang)
+* installing *source* package ‘gridExtra’ ...
+** package ‘gridExtra’ successfully unpacked and MD5 sums checked
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded
+* DONE (gridExtra)
+* installing *source* package ‘bindrcpp’ ...
+** package ‘bindrcpp’ successfully unpacked and MD5 sums checked
+** libs
+g++ -I/usr/share/R/include -DNDEBUG -I../inst/include -I.  -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/Rcpp/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/plogr/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c RcppExports.cpp -o RcppExports.o
+g++ -I/usr/share/R/include -DNDEBUG -I../inst/include -I.  -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/Rcpp/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/plogr/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c create.cpp -o create.o
+g++ -I/usr/share/R/include -DNDEBUG -I../inst/include -I.  -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/Rcpp/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/plogr/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c plogr.cpp -o plogr.o
+g++ -I/usr/share/R/include -DNDEBUG -I../inst/include -I.  -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/Rcpp/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/plogr/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c test.cpp -o test.o
+g++ -shared -L/usr/lib/R/lib -Wl,-Bsymbolic-functions -Wl,-z,relro -o bindrcpp.so RcppExports.o create.o plogr.o test.o -L/usr/lib/R/lib -lR
+installing to /home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/bindrcpp/libs
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+* DONE (bindrcpp)
+* installing *source* package ‘tibble’ ...
+** package ‘tibble’ successfully unpacked and MD5 sums checked
+** libs
+g++ -I/usr/share/R/include -DNDEBUG   -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/Rcpp/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c RcppExports.cpp -o RcppExports.o
+g++ -I/usr/share/R/include -DNDEBUG   -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/Rcpp/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c matrixToDataFrame.cpp -o matrixToDataFrame.o
+g++ -shared -L/usr/lib/R/lib -Wl,-Bsymbolic-functions -Wl,-z,relro -o tibble.so RcppExports.o matrixToDataFrame.o -L/usr/lib/R/lib -lR
+installing to /home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/tibble/libs
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded
+* DONE (tibble)
+* installing *source* package ‘tidyselect’ ...
+** package ‘tidyselect’ successfully unpacked and MD5 sums checked
+** libs
+g++ -I/usr/share/R/include -DNDEBUG   -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/Rcpp/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c RcppExports.cpp -o RcppExports.o
+g++ -I/usr/share/R/include -DNDEBUG   -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/Rcpp/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c combine_variables.cpp -o combine_variables.o
+g++ -shared -L/usr/lib/R/lib -Wl,-Bsymbolic-functions -Wl,-z,relro -o tidyselect.so RcppExports.o combine_variables.o -L/usr/lib/R/lib -lR
+installing to /home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/tidyselect/libs
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+* DONE (tidyselect)
+* installing *source* package ‘dplyr’ ...
+** package ‘dplyr’ successfully unpacked and MD5 sums checked
+** libs
+g++ -I/usr/share/R/include -DNDEBUG -I../inst/include -DCOMPILING_DPLYR -DBOOST_NO_INT64_T -DBOOST_NO_INTEGRAL_INT64_T -DBOOST_NO_LONG_LONG -DRCPP_USING_UTF8_ERROR_STRING  -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/Rcpp/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/BH/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/bindrcpp/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/plogr/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c RcppExports.cpp -o RcppExports.o
+g++ -I/usr/share/R/include -DNDEBUG -I../inst/include -DCOMPILING_DPLYR -DBOOST_NO_INT64_T -DBOOST_NO_INTEGRAL_INT64_T -DBOOST_NO_LONG_LONG -DRCPP_USING_UTF8_ERROR_STRING  -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/Rcpp/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/BH/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/bindrcpp/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/plogr/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c address.cpp -o address.o
+g++ -I/usr/share/R/include -DNDEBUG -I../inst/include -DCOMPILING_DPLYR -DBOOST_NO_INT64_T -DBOOST_NO_INTEGRAL_INT64_T -DBOOST_NO_LONG_LONG -DRCPP_USING_UTF8_ERROR_STRING  -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/Rcpp/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/BH/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/bindrcpp/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/plogr/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c api.cpp -o api.o
+g++ -I/usr/share/R/include -DNDEBUG -I../inst/include -DCOMPILING_DPLYR -DBOOST_NO_INT64_T -DBOOST_NO_INTEGRAL_INT64_T -DBOOST_NO_LONG_LONG -DRCPP_USING_UTF8_ERROR_STRING  -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/Rcpp/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/BH/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/bindrcpp/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/plogr/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c arrange.cpp -o arrange.o
+g++ -I/usr/share/R/include -DNDEBUG -I../inst/include -DCOMPILING_DPLYR -DBOOST_NO_INT64_T -DBOOST_NO_INTEGRAL_INT64_T -DBOOST_NO_LONG_LONG -DRCPP_USING_UTF8_ERROR_STRING  -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/Rcpp/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/BH/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/bindrcpp/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/plogr/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c between.cpp -o between.o
+g++ -I/usr/share/R/include -DNDEBUG -I../inst/include -DCOMPILING_DPLYR -DBOOST_NO_INT64_T -DBOOST_NO_INTEGRAL_INT64_T -DBOOST_NO_LONG_LONG -DRCPP_USING_UTF8_ERROR_STRING  -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/Rcpp/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/BH/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/bindrcpp/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/plogr/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c bind.cpp -o bind.o
+g++ -I/usr/share/R/include -DNDEBUG -I../inst/include -DCOMPILING_DPLYR -DBOOST_NO_INT64_T -DBOOST_NO_INTEGRAL_INT64_T -DBOOST_NO_LONG_LONG -DRCPP_USING_UTF8_ERROR_STRING  -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/Rcpp/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/BH/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/bindrcpp/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/plogr/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c combine_variables.cpp -o combine_variables.o
+g++ -I/usr/share/R/include -DNDEBUG -I../inst/include -DCOMPILING_DPLYR -DBOOST_NO_INT64_T -DBOOST_NO_INTEGRAL_INT64_T -DBOOST_NO_LONG_LONG -DRCPP_USING_UTF8_ERROR_STRING  -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/Rcpp/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/BH/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/bindrcpp/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/plogr/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c distinct.cpp -o distinct.o
+g++ -I/usr/share/R/include -DNDEBUG -I../inst/include -DCOMPILING_DPLYR -DBOOST_NO_INT64_T -DBOOST_NO_INTEGRAL_INT64_T -DBOOST_NO_LONG_LONG -DRCPP_USING_UTF8_ERROR_STRING  -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/Rcpp/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/BH/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/bindrcpp/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/plogr/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c filter.cpp -o filter.o
+g++ -I/usr/share/R/include -DNDEBUG -I../inst/include -DCOMPILING_DPLYR -DBOOST_NO_INT64_T -DBOOST_NO_INTEGRAL_INT64_T -DBOOST_NO_LONG_LONG -DRCPP_USING_UTF8_ERROR_STRING  -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/Rcpp/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/BH/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/bindrcpp/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/plogr/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c group_by.cpp -o group_by.o
+g++ -I/usr/share/R/include -DNDEBUG -I../inst/include -DCOMPILING_DPLYR -DBOOST_NO_INT64_T -DBOOST_NO_INTEGRAL_INT64_T -DBOOST_NO_LONG_LONG -DRCPP_USING_UTF8_ERROR_STRING  -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/Rcpp/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/BH/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/bindrcpp/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/plogr/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c group_indices.cpp -o group_indices.o
+g++ -I/usr/share/R/include -DNDEBUG -I../inst/include -DCOMPILING_DPLYR -DBOOST_NO_INT64_T -DBOOST_NO_INTEGRAL_INT64_T -DBOOST_NO_LONG_LONG -DRCPP_USING_UTF8_ERROR_STRING  -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/Rcpp/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/BH/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/bindrcpp/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/plogr/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c hybrid.cpp -o hybrid.o
+g++ -I/usr/share/R/include -DNDEBUG -I../inst/include -DCOMPILING_DPLYR -DBOOST_NO_INT64_T -DBOOST_NO_INTEGRAL_INT64_T -DBOOST_NO_LONG_LONG -DRCPP_USING_UTF8_ERROR_STRING  -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/Rcpp/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/BH/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/bindrcpp/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/plogr/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c hybrid_count.cpp -o hybrid_count.o
+g++ -I/usr/share/R/include -DNDEBUG -I../inst/include -DCOMPILING_DPLYR -DBOOST_NO_INT64_T -DBOOST_NO_INTEGRAL_INT64_T -DBOOST_NO_LONG_LONG -DRCPP_USING_UTF8_ERROR_STRING  -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/Rcpp/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/BH/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/bindrcpp/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/plogr/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c hybrid_debug.cpp -o hybrid_debug.o
+g++ -I/usr/share/R/include -DNDEBUG -I../inst/include -DCOMPILING_DPLYR -DBOOST_NO_INT64_T -DBOOST_NO_INTEGRAL_INT64_T -DBOOST_NO_LONG_LONG -DRCPP_USING_UTF8_ERROR_STRING  -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/Rcpp/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/BH/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/bindrcpp/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/plogr/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c hybrid_in.cpp -o hybrid_in.o
+g++ -I/usr/share/R/include -DNDEBUG -I../inst/include -DCOMPILING_DPLYR -DBOOST_NO_INT64_T -DBOOST_NO_INTEGRAL_INT64_T -DBOOST_NO_LONG_LONG -DRCPP_USING_UTF8_ERROR_STRING  -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/Rcpp/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/BH/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/bindrcpp/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/plogr/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c hybrid_minmax.cpp -o hybrid_minmax.o
+g++ -I/usr/share/R/include -DNDEBUG -I../inst/include -DCOMPILING_DPLYR -DBOOST_NO_INT64_T -DBOOST_NO_INTEGRAL_INT64_T -DBOOST_NO_LONG_LONG -DRCPP_USING_UTF8_ERROR_STRING  -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/Rcpp/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/BH/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/bindrcpp/include" -I"/home/dhankar/R/x86_64-pc-linux-gnu-library/3.3/plogr/include"   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c hybrid_nth.cpp -o hybrid_nth.o

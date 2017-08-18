@@ -1,0 +1,255 @@
+---
+title: "R for Beginners - R for Finance Code File-1"
+output:
+  pdf_document: default
+  html_notebook: default
+  html_document: default
+urlcolor: blue
+---
+
+
+This R code book written by [Rohit Dhankar](https://github.com/RohitDhankar) . GitHub - https://github.com/RohitDhankar 
+
+Code and Data > https://github.com/RohitDhankar/R-Beginners-Online-Virtual-Learning-Session    
+
+Good practice to keep track of current Working Directory , list all Objects in R ENVIRONMENT - specially so when committing changes to Git or any other version control Remote directory. 
+
+# R for Finance
+
+```{r}
+
+library("forecast");
+library("ggplot2");
+library("ggfortify") 
+library("tseries")
+
+
+```
+
+```{r}
+
+
+
+
+```
+
+
+
+```{r}
+# Simulating Synthetic Data 
+
+# Set Seed -- ensure reproducible results 
+
+set.seed(123)
+
+# . 
+
+
+# Scalar Vector Constant - tweak to change DF Dimensions
+aa<-1500
+
+# 
+
+
+
+# CHECK --- Could i have done this faster in Python ?? 
+
+
+# Func - seq(as.Date ...)
+# REFER -- https://stat.ethz.ch/R-manual/R-devel/library/base/html/seq.Date.html
+
+#
+# #
+# head(mdf,n=20)
+# #
+# length(mdf$cty_name)
+# #
+# summary(mdf) # Summary of DF
+# #
+# str(mdf) # Structure of DF
+# # #
+# #Explicitly check the Class and Typeof 
+# class(mdf$cty_name);class(mdf$country_name);class(mdf$var_dates)
+# #
+# typeof(mdf$cty_name);typeof(mdf$country_name);typeof(mdf$var_dates)
+
+ 
+```
+# Section -2   
+
+Also many other sources from the net.  
+Rohit Dhankar claims no copyright to any of this code.   
+
+
+
+
+
+
+
+```{r}
+
+
+
+
+```
+
+
+
+```{r}
+
+# Start the clock!
+# ptm <- proc.time()
+# 
+# vec_gross_sale <- p_sale_count_rnd*p_sale_cost_rnd
+# 
+# summary(vec_gross_sale)
+# 
+# proc.time() - ptm 
+# 
+#
+# As seen below in our case 
+# ELAPSED time - 1st 0.011 , 2nd - 0.012
+# Thus the WALL CLOCK or REAL / ELAPSED 
+# timings are almost same . 
+#
+# The USER TIME and SYSTEM TIME's in our case 
+# add upto - 
+# 1st - 0.008
+# 2nd - 0.012
+
+# Thus it would seem we are better off 
+# with Vector Multiplication
+
+# But we also need to consider 
+# once we have the "vec_gross_sale" 
+# we will need to add it to out "mdf"
+
+# Kindly also note the Timings will
+# differ for each system - also for each run 
+# of the chunk of code on same sys
+
+# Definition of user Time --- The ‘user time’ is the CPU time 
+# charged for execution of user instructions of the calling process.
+#
+# REFER- https://stat.ethz.ch/R-manual/R-devel/library/base/html/proc.time.html
+
+
+
+```
+
+
+```{r}
+
+# Now to multiply TWO Columns of the DF 
+# Also called COLUMNAR VECTORS 
+
+# Again start the clock!
+# ptm <- proc.time()
+# 
+# mdf$gross_sale<- mdf$p_sale_count_rnd*mdf$p_sale_cost_rnd
+# 
+# proc.time() - ptm 
+# #
+# str(mdf)
+# #
+# summary(mdf)
+# #
+# write.csv(mdf,file="Mkt_DATA_Files/mdf.csv") 
+# ## Writes to Sub Directory - DATA_Files
+# #
+
+
+```
+
+
+```{r}
+
+
+
+```
+
+
+
+
+```{r}
+
+
+```
+
+
+
+```{r}
+
+
+```
+
+
+
+```{r}
+
+
+```
+
+
+
+
+```{r}
+
+
+```
+
+
+
+
+```{r}
+
+
+```
+
+
+
+
+```{r}
+
+
+```
+
+
+
+
+```{r}
+
+
+```
+
+
+
+
+```{r}
+
+
+```
+
+
+
+
+```{r}
+
+
+```
+
+
+
+
+```{r}
+
+
+```
+
+
+
+
+```{r}
+
+
+```
