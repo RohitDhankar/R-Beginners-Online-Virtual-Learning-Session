@@ -34,17 +34,114 @@ set.seed(123)
 infy_df <- read.csv("~/Desktop/R_Own/R_Finance/DATA_Files/INFY.csv")
 str(infy_df)
 summary(infy_df)
-#start_date <- infy_df$Date[1] ## [1] 19-Aug-2015
-#len_df<-length(infy_df$Date)
-#end_date <-infy_df$Date[len_df] ## [1] 17-Aug-2017
+start_date <- infy_df$Date[1] ## [1] 19-Aug-2015
+len_df<-length(infy_df$Date)
+end_date <-infy_df$Date[len_df] ## [1] 17-Aug-2017
 
 # Convert DF to TS 
-#ts_infy <-ts(infy_df, start = start_date, end = end_date,  frequency = 12) #
+
 ts_infy <-ts(infy_df, start = c(2015,8), end =  c(2017,8),  frequency = 12) #
-plot(ts_infy)
+plot.ts(ts_infy,main="NSE-INFY-STOCK_PRICE_DAILY_CLOSING",col="green")
 
 #
 #
+
+
+```
+
+```{r}
+#?ts()
+# frequency	---
+# the number of observations per unit of time.
+# deltat	---
+# the fraction of the sampling period between successive observations; e.g., 1/12 for monthly data. Only one of frequency or deltat should be provided.
+#
+ts_infy1 <-ts(infy_df, start = c(2015,8), end =  c(2017,8), frequency = 24,names = "NSE-INFY-STOCK_PRICE_DAILY_CLOSING") #
+#
+str(ts_infy1);summary(ts_infy1)
+#
+typeof(ts_infy1) ## [1] "double"
+#
+typeof(ts_infy) ## [1] "double"
+#
+class(ts_infy)
+#
+plot.ts(ts_infy1,main="NSE-INFY-STOCK_PRICE_DAILY_CLOSING",col="blue")
+
+
+```
+
+
+```{r}
+
+
+```
+
+
+```{r}
+
+
+```
+
+
+
+```{r}
+
+
+```
+
+
+
+```{r}
+
+
+```
+
+
+
+```{r}
+
+
+```
+
+
+
+```{r}
+
+
+```
+
+
+
+```{r}
+
+
+```
+
+
+
+```{r}
+
+
+```
+
+
+
+```{r}
+
+
+```
+
+
+
+```{r}
+
+
+```
+
+
+
+```{r}
 
 
 ```
