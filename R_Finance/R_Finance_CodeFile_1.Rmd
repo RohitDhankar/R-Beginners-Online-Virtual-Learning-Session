@@ -89,7 +89,7 @@ SOURCE -- WIKI -- https://en.wikipedia.org/wiki/Decomposition_of_time_series
 
  There are many lively discussions with regards which functions from the STATS  
  package to be used for decomposition i am refering a few below here - i shall  
- experiment with a couple of methods and see what works best for best.   
+ experiment with a couple of methods and see what works best for us.   
  
 
 ```{r}
