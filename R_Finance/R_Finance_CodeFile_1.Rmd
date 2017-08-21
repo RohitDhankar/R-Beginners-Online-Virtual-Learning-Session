@@ -150,6 +150,12 @@ plot(stl(ts_infy1, s.window = 7, t.window = 50, t.jump = 1))
 
 ```
 
+In the plot above --Vertical Grey Bars - seen on right of each plot.  
+These signify relative importance Component.  
+Longest Vertical bar is of - TREND  
+In general terms - if the GREY BAR is Larger   
+The impact of the Component in this case TREND is LEAST   
+###Source  -- https://stats.stackexchange.com/questions/7876/interpreting-range-bars-in-rs-plot-stl
 
 
 ```{r}
@@ -187,6 +193,9 @@ plot(dcomp_infy_1,main="Additive Decomposition -> Data[Yt],Seasonal[St],Trend[Mt
 
 ```{r}
 
+acf(dcomp_infy_1$time.series[,3],main="Auto Correlation Function - ACF - Residuals")
+
+
 
 ```
 
@@ -194,12 +203,8 @@ plot(dcomp_infy_1,main="Additive Decomposition -> Data[Yt],Seasonal[St],Trend[Mt
 
 ```{r}
 
-
-```
-
-
-
-```{r}
+Resid_decomp<-dcomp_infy_1$time.series[,3] # Time Series of Residuals 
+acf(Resid_decomp,main="Auto Correlation Function - ACF - Residuals [Resid_decomp]")
 
 
 ```
@@ -207,6 +212,25 @@ plot(dcomp_infy_1,main="Additive Decomposition -> Data[Yt],Seasonal[St],Trend[Mt
 
 
 ```{r}
+
+Season_decomp<-dcomp_infy_1$time.series[,2] # Time Series of Seasonal Components 
+plot(Season_decomp,col="red", cex = 5,main="NSE-INFY_Seasonal Decomposition- 2015 to 2017")
+lines(stats::lowess(Season_decomp),col="blue")
+#lines(stats::lowess(Season_decomp),col="blue")
+
+
+```
+
+
+
+```{r}
+
+# The stl() function presumes an ADDITIVE Decomposition 
+# We now take a Natural Log [ Log-transform] the response to give a MULTIPLICATIVE Decomposition
+
+require(ggplot2)
+require(ggfortify)
+autoplot(stl(ts_infy1, s.window = 12, t.window = 10), ts.colour = 'blue',main="NSE-INFY-2015 to 2017 - Additive Decomposition ")
 
 
 ```
