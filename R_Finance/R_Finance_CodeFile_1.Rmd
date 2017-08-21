@@ -16,6 +16,18 @@ Good practice to keep track of current Working Directory , list all Objects in R
 
 # R for Finance
 
+A univariate data set having ONE Variable that varies as time passes is a TIME SERIES.  
+Most data sets used for Machine Learning or Advanced Statistics have Multivariate Data.  
+
+TIME SERIES data is used as inferential and predictive data for various Business  
+functions. Forecasting the Weather phenomenon for Agri based business.  
+Forecasting usage of Pesticides , onset of Rains etc etc .    
+
+Within FINANCE usage is for Predicting STOCK ASSET VALUEs and also NAV's   
+of Mutual Funds.  
+
+
+
 ```{r}
 
 library("forecast");
@@ -79,6 +91,25 @@ plot.ts(ts_infy1,main="NSE-INFY-STOCK_PRICE_DAILY_CLOSING",col="blue",xlab="YEAR
 
 ```
 
+# STATIONARY TIME SERIES :- 
+
+We need to make the TIME SERIES Stationary if it is Not already so.  
+TBD ---- WIP --- ARMA and ARIMA models   
+
+
+# ARMA(p,q)
+
+TBD -------
+
+
+
+# Auto Regressive Integrated Moving Averages (ARIMA)
+
+TBD -------
+
+
+
+
 # Decomposition of TIME SERIES :- 
 
 " to construct, from an observed time series, a number of   
@@ -103,6 +134,8 @@ Various Sources ---
 STACK_EXCHANGE --  https://stats.stackexchange.com/questions/9506/stl-trend-of-time-series-using-r?rq=1  
 
 STACK_EXCHANGE --  https://stats.stackexchange.com/questions/85987/which-is-better-stl-or-decompose  
+
+
 
 
 # ESTIMATING and ELIMINATING THE TREND 
@@ -235,16 +268,28 @@ autoplot(stl(ts_infy1, s.window = 12, t.window = 10), ts.colour = 'blue',main="N
 
 ```
 
+# ETS - Exponential Smoothing Methods 
+
+We highly recommend further reads for the ETS   
+There are some refrences at the end of this text.  
+
+## Source -- https://www.otexts.org/fpp/7/6
 
 
 ```{r}
 
+#lag.plot(ts_infy1,lags = 1,main="NSE-INFY-2015 to AUG 2017 ") ;gglagplot(ts_infy1,lags = 1) # Lag plots INFY - LAG ==1
 
 ```
 
 
 
 ```{r}
+
+# TBD --- 
+
+ggfreqplot(ts_infy1,main="NSE-INFY--Month Wise ___Overall Data"); ## Not intelligent for this data set 
+ggfreqplot(ts_infy1,freq=4,main="NSE-INFY--Quarterly___Overall Data")
 
 
 ```
