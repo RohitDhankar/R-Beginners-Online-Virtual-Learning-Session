@@ -7,7 +7,7 @@
    
 
 SCREEN_SHOT_1: 
-![alt text](../master/R_Marketing/Mkt_IMAGE_Files/1.png "SCREEN_SHOT_1")
+![alt text](../R_Marketing/Mkt_IMAGE_Files/1.png "SCREEN_SHOT_1")
 #
 
 SCREEN_SHOT_2: 
