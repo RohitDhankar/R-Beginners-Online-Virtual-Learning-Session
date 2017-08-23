@@ -67,6 +67,11 @@ summary(transaction_data)
 # Using Function - readLines() from BASE 
 #
 transaction_data1<- readLines("~/Desktop/R_Own/R_Marketing/Mkt_DATA_Files/retail.dat")
+#write.csv(transaction_data1, file = "~/Desktop/R_Own/R_Marketing/Mkt_DATA_Files/transaction_data1.csv")
+# We could get a CSV at this stage but not sure if the CSV 
+# will capture the WHITESPACE " ".
+
+
 #
 
 
@@ -180,11 +185,9 @@ We now visualize the Data to make further sense of the Association Rules.
 
 ```{r}
 require(arulesViz)
-
-### Errors 
-
-
-
+#
+plot(market_basket_rules)
+#
 
 ```
 
@@ -192,6 +195,10 @@ require(arulesViz)
 
 
 ```{r}
+
+#plot(market_basket_rules,interactive=TRUE)
+
+
 
 
 ```
