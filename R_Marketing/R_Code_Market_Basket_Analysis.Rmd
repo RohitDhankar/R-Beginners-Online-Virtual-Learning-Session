@@ -1,0 +1,253 @@
+---
+title: "R for Marketing - Market Basket Analysis"
+output:
+  pdf_document: default
+  html_notebook: default
+  html_document: default
+urlcolor: blue
+---
+
+
+This R code book written by [Rohit Dhankar](https://github.com/RohitDhankar) . GitHub - https://github.com/RohitDhankar 
+
+Code and Data > [Rohit Dhankar-GITHUB](https://github.com/RohitDhankar)
+
+The dataset is Copyrighted by - 
+
+Brijs T., Swinnen G., Vanhoof K., and Wets G. (1999), The use of association rules for prod-
+uct assortment decisions: a case study, in: Proceedings of the Fifth International Conference on
+Knowledge Discovery and Data Mining, San Diego (USA), August 15-18, pp.  254-260.  ISBN:
+1-58113-143-7.
+
+# R for Marketing - Market Basket Analysis
+
+```{r}
+# Getting the Retail Sales Data -- http://fimi.ua.ac.be/data/retail.pdf
+# Data can also be taken from -- http://r-marketing.r-forge.r-project.org
+# Also at -- http://www.cis.hut.fi/Opinnot/T-61.5060/2005/t615060-l-2005-09-29-b.pdf
+
+
+# Set Seed -- ensure reproducible results 
+
+set.seed(123)
+
+require(arules) # Mining Association Rules and Frequent Itemsets
+#fileURL <- "http://fimi.ua.ac.be/data/retail.dat.gz"
+#download.file(fileURL, destfile="retail.data.gz", method="curl")
+# Read the data in basket format
+transaction_data = read.transactions("retail.data.gz", format = "basket", sep=" ");
+#
+# The Structure of the Data
+str(transaction_data)
+##
+# Highlighted for focus --- 
+# .. .. ..@ i
+# : int [1:908576] 0 1 2 1113 2224 3335 4446 5557 6668 7249 ...
+# ##
+# .. .. ..@ p
+# : int [1:88163] 0 30 33 36 47 51 64 70 73 79 ...
+# ##
+# .. .. ..@ Dim
+# : int [1:2] 16470 88162
+#
+# The Summary of the Data 
+summary(transaction_data)
+ 
+```
+# Data Summary 
+
+1. Each ROW or Obs of the data is - 1 - Market Basket.  
+2. Each Market Basket has many different purchase items.  
+3. There are - 88,162 ROWS.  
+4. Each ROW mostly has different no. of purchase items.  
+
+
+
+```{r}
+# Using Function - readLines() from BASE 
+#
+transaction_data1<- readLines("~/Desktop/R_Own/R_Marketing/Mkt_DATA_Files/retail.dat")
+#
+
+
+```
+
+
+
+```{r}
+# Read the HEAD  end of the Data 
+#
+head(transaction_data1)
+#
+
+
+
+```
+
+
+```{r}
+# Read Only the 5th MARKET BASKET and see how many ITEMS in it and WHICH ALL Items ? 
+#
+head(transaction_data1[5])
+
+
+```
+
+
+```{r}
+# Read TAIL end of the Data 
+#
+tail(transaction_data1)
+
+
+```
+We can now create a DATA STRUCTURE with LABELS for each,     
+Market basket. Each Market Basket is also called a - TRANSACTION.   
+
+To create LABELS or ROW Names we need a NAMES Vector.  
+Lets create a ROW_Labels Vector.  
+
+
+```{r}
+# Code for ROW_Labels vector 
+#
+ROW_Labels <- paste("Market_basket_",1:length(transaction_data1),sep="")
+#
+typeof(ROW_Labels)
+#
+class(ROW_Labels)
+#
+ROW_Labels[1:20] # Prints initial 20 LABELS 
+#
+tail(ROW_Labels) # Market_basket_88162"
+#
+str(ROW_Labels)
+# As seen above - we have created a CHARACTER Vector with 
+# ROW_Lables == Market_basket_1 to Market_basket_88162
+
+
+```
+
+We now use the Function - strsplit() , to SPLIT the data at WHITESPACE    
+into ROWS , thus whenever a WHITESPACE occurs or a MARKET BASKET or ROW ends  
+the data is split into the Next Row .  
+
+
+```{r}
+
+transaction_list <-strsplit(transaction_data1,"")
+#
+str(transaction_list)
+# 
+# We Add the ROW_names Labels 
+#
+names(transaction_list) <- paste("Market_basket_",1:length(transaction_data1),sep="")
+#
+# Again see the STRUCTURE
+#
+str(transaction_list) # 
+#
+tail(transaction_list)
+#
+#
+# We can now clearly see the SPARSNESS of the Data 
+# The "" - Blanks occur eeven adjacent to each other 
+# seen in - $Market_basket_88159 - thus whatever Order 
+# is maintained in the Brick and Mortar RETAIL STORE 
+# is not always suggestive of Association 
+# 
+# Also looking at $Market_basket_88160
+ #    [1] "2" "3" "1" "0" " " "4" "2" "6" "7" " "
+# we can observe a FLIP FLOP Pattern 
+#
+
+
+```
+
+
+
+```{r}
+
+market_basket_rules <- apriori(transaction_data, parameter=list(supp=0.001, conf=0.4))
+
+
+```
+
+# DATA VISUALIZATION - A RULES VIZ 
+
+We now visualize the Data to make further sense of the Association Rules.  
+
+
+```{r}
+require(arulesViz)
+
+### Errors 
+
+
+
+
+```
+
+
+
+
+```{r}
+
+
+```
+
+
+
+
+```{r}
+
+
+```
+
+
+
+
+```{r}
+
+
+```
+
+
+
+
+```{r}
+
+
+```
+
+
+
+
+```{r}
+
+
+```
+
+
+
+
+```{r}
+
+
+```
+
+
+
+
+```{r}
+
+
+```
+
+
+
+
+```{r}
+
+
+```
