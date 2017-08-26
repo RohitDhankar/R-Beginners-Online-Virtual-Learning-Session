@@ -175,12 +175,19 @@ tail(transaction_list)
 
 market_basket_rules <- apriori(transaction_data, parameter=list(supp=0.001, conf=0.4))
 
+# Create a DF of Rules
+mba_rules_df<- as(market_basket_rules, "data.frame")
+#
+str(mba_rules_df)
+#
+write.csv(mba_rules_df, file = "~/Desktop/R_Own/R_Marketing/Mkt_DATA_Files/mba_rules_df.csv")
+#
 
 ```
 
-# DATA VISUALIZATION - A RULES VIZ 
+# DATA VISUALIZATION - arulesVIZ 
 
-We now visualize the Data to make further sense of the Association Rules.  
+Visualize Data to make further sense of the Association Rules.  
 
 
 ```{r}
